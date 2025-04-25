@@ -5,6 +5,14 @@ sidebar_position: 1
 ## SteamCore Session
 - Setting up Voice Chat for SteamCore Online Multiplayer Sessions
 
+:::tip NOTE
+This is only going to work with SteamCore Multiplayer Sessions
+:::
+
+:::warning NOTE
+This is not going to work if you're connecting to a dedicated server using console commands, this is for SteamCore Sessions Only!
+:::
+
 ### DefaultEngine.ini
 - First edit your **DefaultEngine.ini** configuration file and make sure it has these values configured.
 ```cpp
