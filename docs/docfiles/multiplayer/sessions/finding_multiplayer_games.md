@@ -5,8 +5,8 @@ sidebar_position: 2
 # Finding Multiplayer Games
 You can find available sessions by calling “Find SteamCore Sessions“, you can also apply “Search Settings” filters to filter out unwanted sessions
 
-:::tip TIP
-This Example has a Video Tutorial that you can find here: [Related Video](../../videos/multiplayer-sessions.mdx)
+:::info Video Tutorial is available
+[Video Tutorial](../../videos/multiplayer-sessions.mdx)
 :::
 
 ## Finding Sessions

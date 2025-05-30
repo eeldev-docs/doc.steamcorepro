@@ -4,8 +4,8 @@ sidebar_position: 3
 
 # Joining Multiplayer Games
 
-:::tip TIP
-This Example has a Video Tutorial that you can find here: [Related Video](../../videos/multiplayer-sessions.mdx)
+:::info Video Tutorial is available
+[Video Tutorial](../../videos/multiplayer-sessions.mdx)
 :::
 
 ## Joining a Session

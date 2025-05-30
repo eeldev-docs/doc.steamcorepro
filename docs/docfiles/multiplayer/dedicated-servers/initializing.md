@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Initializing the Dedicated Server
 :::tip TIP
-This Example has a Video Tutorial that you can find here: [Related Video](../../videos/dedicated-server.mdx)
+This Example has a Video Tutorial that you can find here: [Related Video](../../videos/dedicated-server-ue5.mdx)
 :::
 
 ### Initializing using SteamCore Online Subsystem (OSS)

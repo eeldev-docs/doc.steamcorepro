@@ -4,7 +4,7 @@ sidebar_position: 10
 
 # Filtering Servers
 :::tip TIP
-This Example has a Video Tutorial that you can find here: [Related Video](../../videos/dedicated-server.mdx)
+This Example has a Video Tutorial that you can find here: [Related Video](../../videos/dedicated-server-ue5.mdx)
 :::
 
 There are 2 methods for filtering dedicated server results and that is by using **Tags** or a **Server Object**, lets take a look at how we can use this in the game.

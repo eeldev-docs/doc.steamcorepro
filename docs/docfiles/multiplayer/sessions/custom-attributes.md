@@ -1,8 +1,8 @@
 # Custom Session Attributes
 You can create sessions with **custom attributes**, in this case we’re using a String, Int and Bool custom attributes with our session, you can use these attributes to filter your search results later or provide additional data for your session
 
-:::tip TIP
-This Example has a Video Tutorial that you can find here: [Related Video](../../videos/multiplayer-sessions.mdx)
+:::info Video Tutorial is available
+[Video Tutorial](../../videos/multiplayer-sessions.mdx)
 :::
 
 # Creating a session with an attribute

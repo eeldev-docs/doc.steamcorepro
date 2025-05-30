@@ -4,7 +4,7 @@ sidebar_position: 6
 # Connecting to the Server
 
 :::tip TIP
-This Example has a Video Tutorial that you can find here: [Related Video](../../videos/dedicated-server.mdx)
+This Example has a Video Tutorial that you can find here: [Related Video](../../videos/dedicated-server-ue5.mdx)
 :::
 
 Depending on your DefaultEngine.ini setup the method for connecting to the Dedicated Server is different. Below are two examples for connecting to a dedicated server (both using Execute console command).

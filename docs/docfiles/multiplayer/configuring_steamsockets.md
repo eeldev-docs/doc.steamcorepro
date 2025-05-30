@@ -4,6 +4,10 @@ sidebar_position: 1
 
 # Configuring SteamCoreSockets
 
+:::info Video Tutorial is available
+[Video Tutorial](../videos/configuring_multiplayer.mdx)
+:::
+
 ## DefaultEngine.ini
 - The SteamCoreSockets NetDriver is configured in your projects **DefaultEngine.ini**
 

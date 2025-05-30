@@ -4,6 +4,10 @@ sidebar_position: 1
 
 # Installing the plugin
 
+:::info Video Tutorial is available
+[Video Tutorial](../videos/getting_started.mdx)
+:::
+
 ## Installing
 - You can only install the plugin via the Epic Launcher
 

@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Finding the Server
 :::tip TIP
-This Example has a Video Tutorial that you can find here: [Related Video](../../videos/dedicated-server.mdx)
+This Example has a Video Tutorial that you can find here: [Related Video](../../videos/dedicated-server-ue5.mdx)
 :::
 
 Depending on your preference and setup there are 2 ways of finding your server(s), if you don't know which one to use then give both a try and see what works best for you.

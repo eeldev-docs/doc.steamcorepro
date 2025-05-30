@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 # Voice Chat
 ## SteamCore Session
-- Setting up Voice Chat for SteamCore Online Multiplayer Sessions
+- Setting up Voice Chat for SteamCore Online Multiplayer Sessions 
 
 ### DefaultEngine.ini
 - First edit your **DefaultEngine.ini** configuration file and make sure it has these values configured.

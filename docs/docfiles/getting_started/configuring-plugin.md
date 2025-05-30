@@ -3,12 +3,8 @@ sidebar_position: 2
 ---
 
 # Configuring the Plugin
-:::warning
-Project Settings settings have been removed in recent versions of the plugin
-:::
-![Image](../../../static/img/project_settings_2.png)
-:::warning
-Project Settings settings have been removed in recent versions of the plugin
+:::info Video Tutorial is available
+[Video Tutorial](../videos/getting_started.mdx)
 :::
 
 ## DefaultEngine.ini
@@ -163,3 +159,8 @@ MinHandshakeVersion=0
 bOverrideCurrentHandshakeVersion=True
 CurrentHandshakeVersion=0
 ```
+
+:::warning
+Project Settings settings have been removed in recent versions of the plugin
+:::
+![Image](../../../static/img/project_settings_2.png)

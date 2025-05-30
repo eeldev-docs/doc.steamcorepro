@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Steamworks Settings
 :::tip TIP
-This Example has a Video Tutorial that you can find here: [Related Video](../../videos/dedicated-server.mdx)
+This Example has a Video Tutorial that you can find here: [Related Video](../../videos/dedicated-server-ue5.mdx)
 :::
 
 Go to the Steamworks settings for your application and change the "Dedicated Game Servers Information" to include the latest version for your game, see the example below.

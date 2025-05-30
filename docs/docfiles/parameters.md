@@ -6,6 +6,3 @@
 
 ### -QueryPort=27015
 - Custom query port for Dedicated Servers
-
-### -SteamCoreSocketsRelays
-- 
