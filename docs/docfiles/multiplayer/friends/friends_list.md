@@ -2,6 +2,10 @@
 - Requires SteamCore PRO **1.0.2.4** and later
 - You can find more examples in the [Blueprint Example Project](../../../example-project.md)
 
+# Configuring the Plugin
+:::info Video Tutorial is available
+[Video Tutorial](../../videos/friends_list.mdx)
+:::
 
 ## Listing Friends
 - Newer versions of SteamCore PRO now has a simpler method for retrieving a list of friends, you can still list friends using the traditional way (by using Steamworks SDK nodes) but if you need a simpler way you can use the methods below.
