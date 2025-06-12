@@ -2,53 +2,83 @@
 sidebar_position: 4
 ---
 
-# Using the Plugin
+# Using the SteamCore Plugin
+
+This document explains how to use the **SteamCore Plugin**, detailing essential functionality, nodes, async operations, and delegates for streamlined integration.
+
+---
 
 ## Testing Steam Functionality
-To test steam functionality properly, see the [Testing Steam Functionality Documentation](testing_steam_functionality.md)
 
-## SteamCore Functionality
-- Search for **SteamCore** in the blueprint context menu and you'll find all the available plugin nodes.
+For comprehensive instructions on testing Steam integration, please refer to the [Testing Steam Functionality Documentation](testing_steam_functionality.md).
 
-![Image](../../../static/img/context_menu.png)
+---
 
-## Steamworks Documentation
-- All the Blueprint nodes are named the same as in the official steamworks documentation, the only difference is that you'll be using blueprint nodes instead.
-- Steamworks Documentation: [https://partner.steamgames.com/doc/api](https://partner.steamgames.com/doc/api)
+## Accessing SteamCore Nodes
 
-![Image](../../../static/img/steamworks_example_1.jpg)
+All available **SteamCore** nodes can be found in the Blueprint context menu by simply searching for **SteamCore**.
 
-![Image](../../../static/img/steamworks_example_2.jpg)
+![Context Menu](../../../static/img/context_menu.png)
+
+---
+
+## Using the Steamworks Documentation
+
+The SteamCore Blueprint nodes follow the same naming conventions as the official Steamworks API, providing consistency and ease of use. Instead of direct API calls, you'll work with Blueprint nodes.
+
+- **Official Steamworks Documentation:** [https://partner.steamgames.com/doc/api](https://partner.steamgames.com/doc/api)
+
+Examples of Steamworks nodes:
+
+![Steamworks Example 1](../../../static/img/steamworks_example_1.jpg)
+
+![Steamworks Example 2](../../../static/img/steamworks_example_2.jpg)
+
+---
 
 ## Async Functions
-- The plugin has a lot of Async functions that allows you to run tasks async without freezing the game, however it's important that you connect the blueprint nodes to the right **output** node.
+
+SteamCore features numerous **Async Functions** designed to execute tasks asynchronously without interrupting gameplay.
 
 :::tip
-Always use the "Callback" execution pin when you use the Async functions
+Always use the **"Callback" execution pin** when working with Async Functions to ensure correct handling.
 :::
 
-![Image](../../../static/img/async_functions.png)
+![Async Functions Example](../../../static/img/async_functions.png)
 
-### More Async Functions
-- You can find more Async functions if you look in the blueprint context menu under "steamcore" and the "async" category.
+### Locating Additional Async Functions
 
-![Image](../../../static/img/async_context.png)
+To discover more Async functions:
 
+- Navigate to the Blueprint context menu.
+- Select **SteamCore → Async**.
+
+![Async Context Menu](../../../static/img/async_context.png)
+
+---
 
 ## Delegates
-- The Steamworks SDK has a lot of different delegates that can be bound and used when needed, these delegates are also available with the SteamCore plugin and enables you to use them in your Blueprints.
 
-### Assign the delegate
-- Using the "assign" keyword will automatically create the correct event signature needed for the delegate.
+Steamworks provides numerous delegates that can trigger events in response to Steam client activity. SteamCore simplifies delegate use within Blueprints.
 
-![Image](../../../static/img/assign_delegate.png)
+### Assigning Delegates
 
-### Delegate bound
-This is how a "bound" delegate looks like, for example this event will execute every time steam notices a change to a friends Avatar.
-![Image](../../../static/img/bound_delegate.png)
+Using the **Assign** action automatically generates a delegate event with the correct signature.
 
-Here is another example, when a lobby join is requested in the friends interface this event will be executed from the Steam Client.
-![Image](../../../static/img/bound_delegate_2.png)
+![Assign Delegate Example](../../../static/img/assign_delegate.png)
 
-### More on Delegates
-- You can find more information about the available delegates on the [**Steamworks Website**](https://partner.steamgames.com/doc/api/ISteamFriends#callbacks)
+### Example of Bound Delegates
+
+Delegates bound to Steam events execute automatically when the corresponding event occurs.
+
+For instance, this delegate triggers whenever Steam detects a change in a friend's avatar:
+
+![Bound Delegate Avatar](../../../static/img/bound_delegate.png)
+
+Another example: a delegate triggers when a friend requests to join a lobby through the Steam client:
+
+![Lobby Join Delegate](../../../static/img/bound_delegate_2.png)
+
+### Additional Information on Delegates
+
+For a complete overview and further examples, visit the [Steamworks Delegates Documentation](https://partner.steamgames.com/doc/api/ISteamFriends#callbacks).
