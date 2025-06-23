@@ -5,7 +5,7 @@ sidebar_position: 3
 # Joining Multiplayer Games
 
 :::info Video Tutorial is available
-[Video Tutorial](../../videos/multiplayer/multiplayer-sessions.mdx)
+[Video Tutorial](../../videos/multiplayer/setting-up-steam-multiplayer.mdx)
 :::
 
 ## Joining a Session

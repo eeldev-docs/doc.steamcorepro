@@ -5,7 +5,7 @@ sidebar_position: 1
 # Configuring SteamCoreSockets
 
 :::info Video Tutorial is available
-[Video Tutorial](../videos/multiplayer/configuring_multiplayer.mdx)
+[Video Tutorial](../videos/multiplayer/configuring-steam-multiplayer.mdx)
 :::
 
 ## DefaultEngine.ini

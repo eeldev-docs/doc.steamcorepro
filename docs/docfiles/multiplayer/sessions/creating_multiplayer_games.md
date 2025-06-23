@@ -6,7 +6,7 @@ sidebar_position: 1
 You can create a Online Game Session using the “Create SteamCore Session” node, if the creation is successfull you open your map with the “listen” options so that it will listen for multiplayer connections
 
 :::info Video Tutorial is available
-[Video Tutorial](../../videos/multiplayer/multiplayer-sessions.mdx)
+[Video Tutorial](../../videos/multiplayer/setting-up-steam-multiplayer.mdx)
 :::
 
 ## Creating the Session

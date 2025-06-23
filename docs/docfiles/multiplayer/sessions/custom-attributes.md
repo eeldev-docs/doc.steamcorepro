@@ -2,7 +2,7 @@
 You can create sessions with **custom attributes**, in this case we’re using a String, Int and Bool custom attributes with our session, you can use these attributes to filter your search results later or provide additional data for your session
 
 :::info Video Tutorial is available
-[Video Tutorial](../../videos/multiplayer/multiplayer-sessions.mdx)
+[Video Tutorial](../../videos/multiplayer/setting-up-steam-multiplayer.mdx)
 :::
 
 # Creating a session with an attribute
