@@ -3,20 +3,33 @@ sidebar_position: 2
 ---
 
 # Configuring the Plugin
-:::info Video Tutorial is available
-[Video Tutorial](../videos/getting_started.mdx)
+
+:::info 📽️ Video Tutorial Available  
+Watch the [Getting Started Video Tutorial](../videos/getting_started.mdx) for a walkthrough of the setup process.
 :::
 
-## DefaultEngine.ini
-- Edit your projects DefaultEngine.ini (located in Project\Config\DefaultEngine.ini)
-- To use multiplayer you'll also have to configure [SteamCoreSockets](../multiplayer/configuring_steamsockets.md)
+---
 
-:::note
-Make sure that you do not have duplicate entries in your DefaultEngine.ini, **remove any old Steam configurations** that you might have in your config.
+## Step 1: Configure `DefaultEngine.ini`
+
+Edit your project's `DefaultEngine.ini` located at:
+Project/Config/DefaultEngine.ini
+
+
+> If you're setting up multiplayer features, make sure to also configure [SteamCoreSockets](../multiplayer/configuring_steamsockets.md).
+
+:::note  
+🔁 **Avoid Duplicate Entries**  
+Before adding new configuration values, remove any old Steam-related settings from the file to prevent conflicts.
 :::
+
+---
+
 ## Recommended Settings
 
-```cpp
+Use the following configuration for typical multiplayer projects:
+
+```ini
 [OnlineSubsystemSteamCore]
 SteamDevAppId=480
 SteamAppId=480
@@ -38,7 +51,9 @@ DefaultPlatformService=SteamCore
 ```
 
 ## Minimal Required Settings
-```cpp
+For basic usage (e.g. testing in development), this is the bare minimum configuration:
+
+```ini
 [OnlineSubsystemSteamCore]
 bEnabled=True
 SteamDevAppId=480
@@ -49,118 +64,54 @@ DefaultPlatformService=SteamCore
 ```
 
 ## Available Settings
-```cpp
-/**
-* Enable or disable steam
-*/
+Below is a reference for all configurable options in DefaultEngine.ini:
+```ini
+[OnlineSubsystemSteamCore]
 
+// Enable or disable the SteamCore plugin
 bEnabled=True
-```
 
-```cpp
-/**
-* AppID of your application
-*/
-
+// Your app's Steam ID (Dev ID used during testing)
 SteamAppId=480
 SteamDevAppId=480
-```
 
-```cpp
-/**
-* Steam Server Port
-*/
-
+// Server port (default: 7777)
 Port=7777
-```
 
-```cpp
-/**
-* Copy steamclient dlls when packaging a dedicated server configuration
-* Only windows is supported at this time.
-*
-* Steam Client must be installed on the machine that is packaging.
-* This will throw packaging errors if enabled and steam dlls are not found.
-*/
+// Copy Steam client DLLs when packaging (Windows only)
+bCopySteamDlls=True
 
-bCopySteamDlls=true
-```
-
-```cpp
-/**
-* Enable Steam VAC
-*/
-
+// Enable Steam VAC
 bVACEnabled=True
-```
 
-```cpp
-/**
-* Use SteamNetworking
-*/
+// Use Steam's networking layer
 bUseSteamNetworking=True
-```
 
-```cpp
-/**
-* Should Steam P2P sockets all fall back to Steam servers relay if a direct connection fails
-* Only usable with the SteamCoreSocketsNetDriver
-*
-* Listen servers always use this setting regardless of what this is set to
-*/
-
+// Allow fallback to Steam relay servers if direct P2P fails
 bAllowP2PPacketRelay=True
-```
 
-```cpp
-/**
-* Should the game force a relaunch in Steam if the client isn't already loaded
-*/
-
+// Relaunch game in Steam if not already started via Steam
 bRelaunchInSteam=False
-```
 
-```cpp
-/**
-* Timeout (in seconds) period for any P2P session
-*/
+// Timeout duration for P2P connections
 P2PConnectionTimeout=90
-```
 
-```cpp
-/**
-* Steam Server Query Port
-*/
+// Steam server query port
 GameServerQueryPort=27015
-```
 
-```cpp
-/**
-* Current game version
-*/
-
+// Game version
 GameVersion=1.0.0.0
-```
 
-```cpp
-/**
-* Override console variable: net.MinHandshakeVersion
-*/
-
+// Override net.MinHandshakeVersion
 bOverrideMinHandshakeVersion=True
 MinHandshakeVersion=0
-```
 
-```cpp
-/**
-* Override console variable: net.CurrentHandshakeVersion
-*/
-
+// Override net.CurrentHandshakeVersion
 bOverrideCurrentHandshakeVersion=True
 CurrentHandshakeVersion=0
 ```
 
-:::warning
-Project Settings settings have been removed in recent versions of the plugin
+:::warning ⚠️ Project Settings Deprecated
+Support for editing these settings via Project Settings has been removed in recent plugin versions. You must now configure everything through DefaultEngine.ini.
 :::
 ![Image](../../../static/img/project_settings_2.png)

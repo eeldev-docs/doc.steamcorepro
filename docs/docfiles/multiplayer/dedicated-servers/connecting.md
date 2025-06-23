@@ -1,32 +1,60 @@
 ---
+id: connecting-to-server
+title: Connecting to the Server
+description: Learn how to connect to a dedicated server in Unreal Engine using SteamCore PRO sessions, SteamCoreSockets, or IpNetDriver.
+slug: /docfiles/multiplayer/dedicated-servers/connecting
 sidebar_position: 6
 ---
+
 # Connecting to the Server
 
 :::tip TIP
-This Example has a Video Tutorial that you can find here: [Related Video](../../videos/dedicated-server-ue5.mdx)
+This example includes a video tutorial: [Watch the Video](../../videos/dedicated-server-ue5.mdx)
 :::
 
-Depending on your DefaultEngine.ini setup the method for connecting to the Dedicated Server is different. Below are two examples for connecting to a dedicated server (both using Execute console command).
+Depending on your `DefaultEngine.ini` setup, the method for connecting to a dedicated server will vary. Below are three options, all using the **Execute Console Command** node in Unreal Engine.
 
-## Using Find SteamCore PRO Sessions
-- [Use in conjunction with the SteamCoreSockets NetDriver](../../multiplayer/configuring_steamsockets.md)
-- If you're using the **Find SteamCore PRO Sessions** to find multiplayer sessions you can use the **Join Session** node to join a dedicated multiplayer session.
-- The example below should not be used in a live product, it's simply a demonstration that will join the first server found. Ideally you want to build a server list, see the bluerpint example project for a working example.
+---
 
-![Image](../../../../static/img/dedicated_connect_join_session.png)
+## Option 1: Using Find SteamCore PRO Sessions
 
-## Using SteamCoreSockets Setup and Console Command (bypass OnlineSubsystem)
-- [Configuration Example when using SteamCoreSocketsNetDriver](../../multiplayer/configuring_steamsockets.md)
-- The console command should look like this: (**open steam.xxxx:port**), replace xxxx with the servers Steam P2PAddr and port with the servers port, see the sample below.
-- The example below should not be used in a live product, it's simply a demonstration that will join the first server found. Ideally you want to build a server list, see the bluerpint example project for a working example.
+- Use this with the **SteamCoreSockets NetDriver**. [See configuration](../../multiplayer/configuring_steamsockets.md)
+- Use the **Find SteamCore PRO Sessions** node to locate available multiplayer servers.
+- Then connect using the **Join Session** node.
 
+:::caution
+This example automatically joins the **first session found** and is intended only for demonstration.  
+For production, implement a full server list — see the Blueprint example project.
+:::
+
+![Join Session Example](../../../../static/img/dedicated_connect_join_session.png)
+
+---
+
+## Option 2: Using SteamCoreSockets (Bypassing Online Subsystem)
+
+- Configuration guide: [SteamCoreSockets NetDriver](../../multiplayer/configuring_steamsockets.md)
+- Use this console command:
+
+    ```text
+    open steam.P2PAddr:Port
+    ```
+
+  Replace **P2PAddr** with your server’s Steam address and **Port** with the appropriate port.
+
+This is a basic demonstration that joins the first found server.
+Always implement a proper session browser for real-world use.
 
 ![Image](../../../../static/img/dedicated_connect_sockets.png)
 
-## Using IpNetDriver Setup and Console Command (bypass OnlineSubsystem)
-- [Configuration Example when using IpNetDriver](../../additional/configuring_ipnetdriver.md)
-- The console command should look like this: (**open serverIP:port**), replace xxxx with the servers IP Address and port with the servers port, see the sample below.
-- The example below should not be used in a live product, it's simply a demonstration that will join the first server found. Ideally you want to build a server list, see the bluerpint example project for a working example.
+## Option 3: Using IpNetDriver (Bypassing Online Subsystem)
 
-![Image](../../../../static/img/dedicated_connect_ip.png)
+- Use this when you're not relying on Steam or any other OnlineSubsystem.
+- Configuration guide: [IpNetDriver Setup](../../additional/configuring_ipnetdriver.md)
+- Use the following console command:
+
+```text
+  open <IP>:<Port>
+```
+
+  ![Image](../../../../static/img/dedicated_connect_ip.png)
