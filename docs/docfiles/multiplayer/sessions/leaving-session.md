@@ -1,8 +1,8 @@
 ---
-id: leaving-session
+id: leaving-multiplayer-session
 title: Leaving a Session or Server
 description: Learn how to disconnect a client from a session or dedicated server in Unreal Engine using the SteamCore PRO Destroy Session node.
-slug: /docfiles/multiplayer/dedicated-servers/leaving-session
+slug: /docfiles/multiplayer/dedicated-servers/leaving-multiplayer-session
 sidebar_position: 7
 ---
 
