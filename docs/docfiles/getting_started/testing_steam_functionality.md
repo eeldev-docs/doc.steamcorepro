@@ -20,28 +20,8 @@ This guide outlines important steps and requirements to ensure smooth testing of
 - If packaging as a **Shipping Build**, you must upload the build to Steam and launch it via the Steam Client.
 
 ## Packaging Using the Project Launcher
+* [Check out this tutorial on how to use the project launcher!](./package-project.md)
 
-Follow these steps to package your project:
-
-1. **Open the Project Launcher** in Unreal Engine.
-
-   ![Project Launcher](../../../static/img/project_launcher.png)
-
-2. **Configure your profile settings** as needed.
-
-   ![Profile Settings](../../../static/img/project_launcher_1.png)
-
-3. **Select build configurations** (Development or Shipping).
-
-   ![Build Configuration](../../../static/img/project_launcher_2.png)
-
-4. **Return using the back button** after configuring the profile.
-
-   ![Back Button](../../../static/img/project_launcher_3.png)
-
-5. **Start packaging by clicking the Launch button**.
-
-   ![Launch Packaging](../../../static/img/project_launcher_4.png)
 
 ## Multiplayer Testing
 :::warning NOTE
