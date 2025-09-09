@@ -1,35 +1,67 @@
 ---
+id: launching-the-server
+title: Launching a Dedicated Server
+description: Learn how to package and launch a dedicated server for your Unreal Engine game using the Project Launcher or Packager.
+slug: /docfiles/multiplayer/launching-the-server
 sidebar_position: 4
 ---
 
-# Launching the Server
+# Launching a Dedicated Server
 
-# Information
-- To launch your dedicated server you first have to package the dedicated server application using unreal engines Project Launcher or Project Packager.
-- When you have your executable (*ProjectServer.exe* for exmaple) then you can use the examples below.
+This guide explains how to package and launch a dedicated server for your Unreal Engine game. You will use Unreal Engine's **Project Launcher** or **Project Packager** to create the server executable, followed by configuring and starting the server with the appropriate parameters.
 
-## Packaging Project
-- [https://docs.unrealengine.com/4.27/en-US/Basics/Projects/Packaging/](https://docs.unrealengine.com/4.27/en-US/Basics/Projects/Packaging/)
+## Prerequisites
+- **SteamCore PRO** plugin installed and enabled in your Unreal Engine project (if using Steam integration).
+- A configured `DefaultEngine.ini` file with server settings (refer to [SteamCore Setup Documentation](https://eeldev.com/steamcore)).
+- Steamworks integration with a valid **Steam App ID**.
+- The project packaged as a dedicated server build.
 
-![Image](../../../../static/img/packaged_server.png)
+## Information
+- Before launching, you must package your dedicated server application using Unreal Engine's **Project Launcher** or **Project Packager**.
+- Once you have the server executable (e.g., `ProjectServer.exe`), you can proceed with the examples below.
+
+## Additional Parameters
+- Refer to the [Additional Launch Parameters Guide](../../parameters.md) for optional settings to customize server behavior.
+
+## Packaging the Project
+- Follow the official Unreal Engine documentation for packaging your project: [Packaging Documentation](https://docs.unrealengine.com/4.27/en-US/Basics/Projects/Packaging/).
+
+![Packaged Server Example](../../../../static/img/packaged_server.png)
+
+### Steps
+1. Open your project in the Unreal Editor.
+2. Go to **File** > **Package Project** > **Packaging Settings**.
+3. Configure the packaging settings for a dedicated server build (e.g., select "Server" as the build target).
+4. Use the **Project Launcher** to create the package, specifying the output directory.
 
 ## Launching the Server
-- Locate your server executable and make a shortcut to the executable **GameLift_ServerServer.exe** (this is just an example, the executable name will depend on what your project is called).
+After packaging, locate your server executable and set up a shortcut to launch it.
 
-![Image](../../../../static/img/server_folder.png)
+1. **Locate the Executable**:
+   - Find your server executable (e.g., `GameLift_ServerServer.exe`) in the packaged output folder. The exact name depends on your project name.
 
-### Server Shortcut
-- You'll have to append -server and -log to the **Target**. 
+   ![Server Folder Example](../../../../static/img/server_folder.png)
 
-![Image](../../../../static/img/server_shortcut.png)
+2. **Create a Server Shortcut**:
+   - Right-click the executable and create a shortcut.
+   - Append the `-server` and `-log` parameters to the **Target** field to enable server mode and log output.
 
-```
-D:\_compile\GameLiftServer\WindowsServer\GameLift_ServerServer.exe -server -log
-```
+   ![Server Shortcut Example](../../../../static/img/server_shortcut.png)
 
-You'll have to change the path to the executable depending on your own project, these are only examples that apply to this specific project.
+   **Example Target Path**:
+   ```
+   D:\_compile\GameLiftServer\WindowsServer\GameLift_ServerServer.exe -server -log
+   ```
 
-### Starting the Server
-- Start the server by using the shotcut from the previous step, this will start the server and display a log output.
+   - Update the path to match your project’s executable location. The example above is specific to the `GameLiftServer` project.
 
-![Image](../../../../static/img/launching_server.png)
+3. **Start the Server**:
+   - Double-click the shortcut to launch the server.
+   - The server will start, and log output will be displayed in the console window.
+
+   ![Launching Server Example](../../../../static/img/launching_server.png)
+
+## Notes
+- **Logging**: The `-log` parameter generates a log file in the `Saved/Logs` directory (e.g., `YourProject.log`) for debugging. Ensure sufficient disk space.
+- **Testing**: Test the server launch in a development environment to verify connectivity and log output.
+- **Additional Parameters**: Use parameters like `-Port=7777` (see [Additional Launch Parameters](../../parameters.md)) to further configure the server.
