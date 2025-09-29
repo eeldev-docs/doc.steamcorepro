@@ -41,6 +41,7 @@ bRelaunchInSteam=False
 P2PConnectionTimeout=90
 GameServerQueryPort=27015
 GameVersion=1.0.0.0
+bDisableSteamRelaunchInShipping=False
 
 [OnlineSubsystem]
 DefaultPlatformService=SteamCore
@@ -101,6 +102,10 @@ GameServerQueryPort=27015
 
 // Game version
 GameVersion=1.0.0.0
+
+// If true, prevents the game from being relaunched through Steam 
+// when running as a Shipping build. (Requires SteamCore PRO version 1.0.6.9 and later)
+bDisableSteamRelaunchInShipping=False
 
 // Override net.MinHandshakeVersion
 bOverrideMinHandshakeVersion=True

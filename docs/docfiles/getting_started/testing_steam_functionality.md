@@ -17,7 +17,7 @@ This guide outlines important steps and requirements to ensure smooth testing of
 ## Testing a Packaged Build
 
 - Always package your game as a **Development Build** for local testing.
-- If packaging as a **Shipping Build**, you must upload the build to Steam and launch it via the Steam Client.
+- If packaging as a **Shipping Build**, you must upload the build to Steam and launch it via the Steam Client. (This behavior can now be turned off if you want to test shipping builds locally, see [configuring plugin](./configuring-plugin.md))
 
 ## Packaging Using the Project Launcher
 * [Check out this tutorial on how to use the project launcher!](./package-project.md)

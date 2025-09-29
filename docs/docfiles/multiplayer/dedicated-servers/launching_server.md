@@ -1,6 +1,6 @@
 ---
 id: launching-the-server
-title: Launching a Dedicated Server
+title: Launching
 description: Learn how to package and launch a dedicated server for your Unreal Engine game using the Project Launcher or Packager.
 slug: /docfiles/multiplayer/launching-the-server
 sidebar_position: 4

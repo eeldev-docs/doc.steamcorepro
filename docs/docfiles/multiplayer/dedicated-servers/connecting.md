@@ -1,6 +1,6 @@
 ---
 id: connecting-to-server
-title: Connecting to a Dedicated Server
+title: Connecting
 description: Learn how to connect to a dedicated server in Unreal Engine using SteamCore PRO sessions, SteamCoreSockets, or IpNetDriver.
 slug: /docfiles/multiplayer/dedicated-servers/connecting
 sidebar_position: 6

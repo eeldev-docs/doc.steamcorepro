@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# Initializing a Dedicated Server
+# Initializing
 
 This guide explains how to initialize a dedicated server using **SteamCore** for seamless integration with Steam's online features. For a visual walkthrough, watch the [Video Tutorial](../../videos/dedicated-server-ue5.mdx).
 
