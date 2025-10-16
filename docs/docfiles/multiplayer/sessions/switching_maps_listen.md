@@ -1,8 +1,8 @@
 ---
-id: switching-maps
+id: switching-maps-listen
 title: Switching Maps (Server Travel)
 description: Learn how to switch maps on your dedicated server using the ServerTravel node in SteamCore.
-slug: /docfiles/multiplayer/dedicated-servers/switching_maps
+slug: /docfiles/multiplayer/sessions/switching_maps_listen
 sidebar_position: 11
 ---
 
