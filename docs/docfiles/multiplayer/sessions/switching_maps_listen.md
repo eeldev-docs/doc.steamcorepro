@@ -50,8 +50,3 @@ The **ServerTravel** node simplifies map switching by allowing you to specify th
 - **Error Reduction**: Soft references validate map assets at runtime, preventing crashes due to missing or misspelled map names.
 - **Simplified Workflow**: Replaces cumbersome console commands (e.g., `servertravel Map_Level2`) with a single, reusable node.
 - **Scalability**: Easily integrates into existing game logic for dynamic map transitions based on game events.
-
-## Notes
-- Ensure all maps are properly packaged and accessible on the dedicated server.
-- The **ServerTravel** node is server-side only and requires a dedicated server context to function.
-- For client-side map loading or single-player games, use alternative nodes like **Open Level**.
