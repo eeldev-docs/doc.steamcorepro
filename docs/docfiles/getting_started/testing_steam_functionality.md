@@ -8,7 +8,7 @@ This guide outlines important steps and requirements to ensure smooth testing of
 
 ## Prerequisites for Testing
 
-- Configure Steam settings properly in your `DefaultEngine.ini`. See detailed configuration instructions [here](#).
+- Configure Steam settings properly in your `DefaultEngine.ini`. See detailed configuration instructions [here](./configuring-plugin.md).
 - Ensure the Steam Client is running and that you are logged in.
 - Verify that the Steam account used for testing owns the game. You can:
   - Add the Steam account to your app’s organization, or
