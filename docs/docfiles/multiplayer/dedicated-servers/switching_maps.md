@@ -26,7 +26,7 @@ The **ServerTravel** node simplifies map switching by allowing you to specify th
 
 ### Steps
 1. **Add the ServerTravel Node**:
-   - In your server-side Ascending or descending from the previous node, add the **ServerTravel** node to your game logic (e.g., in a Blueprint such as the Game Mode or Level Blueprint).
+   - In your server-side logic, add the **ServerTravel** node to your game logic (e.g., in a Blueprint such as the Game Mode or Level Blueprint).
    - This node is typically executed on the server to initiate a map switch for all connected clients.
 
 2. **Configure the Map Reference**:
@@ -53,5 +53,5 @@ The **ServerTravel** node simplifies map switching by allowing you to specify th
 
 ## Notes
 - Ensure all maps are properly packaged and accessible on the dedicated server.
-- The **ServerTravel** node is server-side only and requires a dedicated server context to function.
+- The **ServerTravel** node is server-side only: it must be executed on the server (dedicated or listen server), not on clients.
 - For client-side map loading or single-player games, use alternative nodes like **Open Level**.

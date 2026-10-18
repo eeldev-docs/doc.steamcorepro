@@ -36,6 +36,11 @@ You can include custom attributes (e.g., map name, game mode) to advertise speci
 To use Steam features (e.g., matchmaking, server visibility), you must include the **steamclient** libraries in your server’s directory. Below are instructions for Windows and Linux servers.
 
 ### Windows Server
+
+:::tip Automatic copying
+When you package a Windows **Server** target on a machine with the Steam client installed, the plugin automatically copies `steamclient(64).dll`, `tier0_s(64).dll` and `vstdlib_s(64).dll` from your Steam installation into the packaged server (controlled by `bCopySteamDlls`, enabled by default). The build fails if any of these files are missing. Only follow the manual steps below if you disabled `bCopySteamDlls` or packaged on a machine without Steam. See [Configuring the Plugin](../../getting_started/configuring-plugin.md).
+:::
+
 1. **Locate the Steamclient Libraries**:
    - Find the `steamclient.dll` and related files in your Steam SDK or Steam installation directory.
 

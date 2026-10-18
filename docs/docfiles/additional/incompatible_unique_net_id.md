@@ -45,6 +45,10 @@ void ABaseGameMode::PreLogin(const FString& Options, const FString& Address, con
 }
 ```
 
+:::warning
+This override intentionally does **not** call `Super::PreLogin`, which means it skips all of the engine's built-in PreLogin checks (including the online subsystem type check). Only use it when you deliberately mix online subsystems, and add your own validation in `PreLogin` if your game relies on it.
+:::
+
 After creating the two files you’ll need to recompile your project and re-parent your Blueprint GameMode to the “BaseGameMode” class.
 
 You should now be able to mix two different subsystems.

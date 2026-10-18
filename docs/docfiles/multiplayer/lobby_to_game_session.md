@@ -22,4 +22,4 @@ In this example we’re going to be creating a simple game session by opening a 
 
 Calling the function “Set Lobby Game Server” will invoke the delegate we bound earlier on all clients that are inside the lobby, in this case we’re using the SteamSockets/SteamNetDriver so we will use our SteamId as the SteamIdGameServer because clients will use our SteamId when connecting to our server.
 
-Then it’s simply a matter of opening the level with the “listen” parameter, also note that you should not set the lobby game server before the map has actually finished loading on the host, but for simplicitys sake we’re setting the game server first and then loading the map in this example.
+Then it’s simply a matter of opening the level with the “listen” parameter, also note that you should not set the lobby game server before the map has actually finished loading on the host, but for simplicity's sake we’re setting the game server first and then loading the map in this example.

@@ -99,6 +99,10 @@ Create a JSON schema for your items, specifying details like `itemdefid`, `type`
 ## Initiating a Transaction
 To start a purchase, use the **Initiate Purchase** node to trigger a transaction for specific items. For example, the following Blueprint initiates a purchase for a "Rifle" (ItemDefID: 10) and a "Bat" (ItemDefID: 100).
 
+:::note
+The screenshot below uses the item definitions from the Example Project (shown in the table at the bottom of the screenshot), not the JSON schema above. Use the `itemdefid` values from **your own** schema, and only items that have a `price` set can be purchased (for example, the `playtimegenerator` item in the schema above cannot be bought).
+:::
+
 ![Initiate Purchase Node](https://eeldev.com/wp-content/uploads/2020/02/4_initiate.png)
 
 ### Steps

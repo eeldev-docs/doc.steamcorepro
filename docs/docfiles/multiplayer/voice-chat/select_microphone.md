@@ -21,7 +21,7 @@ You can find an example of this in the [Blueprint Example Project](../../../exam
 ![Image](../../../../static/img/voice_1.png)
 
 ### Audio Device Data
-- The "Audio Input Device Info" sturct contains details about the input device
+- The "Audio Input Device Info" struct contains details about the input device
 
 ![Image](../../../../static/img/voice_2.png)
 

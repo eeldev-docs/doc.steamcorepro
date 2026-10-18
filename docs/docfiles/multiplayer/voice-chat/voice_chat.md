@@ -36,7 +36,6 @@ bEnabled=True
 bUseSteamNetworking=True
 bAllowP2PPacketRelay=True
 bRelaunchInSteam=False
-P2PConnectionTimeout=90
 GameServerQueryPort=27015
 GameVersion=1.0.0.5
 

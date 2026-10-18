@@ -10,7 +10,16 @@ You can follow along with our [Getting Started Video Tutorial](../videos/getting
 
 ## Installation Overview
 
-The plugin can **only** be installed via the **Epic Games Launcher**.
+The plugin can be installed in two ways:
+
+- **Fab / Epic Games Launcher**: follow all the steps below.
+- **Gumroad**: place the downloaded `SteamCorePRO` plugin folder in your project's `Plugins` folder, then continue from Step 4.
+
+See [Purchase Plugin](../../purchase-plugin.md) for where to buy the plugin.
+
+:::warning
+The plugin will show an error on startup if the engine's **OnlineSubsystemSteam** or **SteamShared** plugins are enabled. These must be disabled for SteamCore to function properly (see Step 1).
+:::
 
 ---
 
@@ -37,7 +46,7 @@ After installation, **move** (do not copy) the plugin from the engine’s Market
 > If your project doesn't have a `Plugins` directory yet, you’ll need to create one.
 
 **Example Path:**
-C:\Program Files\Epic Games\UE_4.27\Engine\Plugins\Marketplace
+`C:\Program Files\Epic Games\UE_5.x\Engine\Plugins\Marketplace` (replace `UE_5.x` with your engine version)
 
 ![Move Plugin](../../../static/img/installing_3.png)
 

@@ -34,7 +34,7 @@ Depending on your setup, if you are using Dedicated Servers to authenticate user
 ![Image](https://eeldev.com/wp-content/uploads/2020/12/56557582ebd0729ae59b2ae335a720d8.png)
 
 ## Cleaning Up
-Destroy/Invalidate the authenitcation ticket when the player exits the game (Inside the PlayerController)
+Destroy/Invalidate the authentication ticket when the player exits the game (Inside the PlayerController)
 
 ![Image](https://eeldev.com/wp-content/uploads/2020/02/cleanup.png)
 

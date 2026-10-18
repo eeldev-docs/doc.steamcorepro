@@ -38,7 +38,6 @@ bEnabled=True
 bUseSteamNetworking=True
 bAllowP2PPacketRelay=True
 bRelaunchInSteam=False
-P2PConnectionTimeout=90
 GameServerQueryPort=27015
 GameVersion=1.0.0.0
 bDisableSteamRelaunchInShipping=False
@@ -65,56 +64,90 @@ DefaultPlatformService=SteamCore
 ```
 
 ## Available Settings
-Below is a reference for all configurable options in DefaultEngine.ini:
+Below is a reference for all configurable options in the `[OnlineSubsystemSteamCore]` section of DefaultEngine.ini:
 ```ini
 [OnlineSubsystemSteamCore]
 
 // Enable or disable the SteamCore plugin
 bEnabled=True
 
-// Your app's Steam ID (Dev ID used during testing)
+// Your app's Steam ID.
+// SteamDevAppId is used in Development/Debug builds (and written to steam_appid.txt),
+// SteamAppId is used in Shipping builds and by dedicated servers (required on servers).
 SteamAppId=480
 SteamDevAppId=480
 
-// Server port (default: 7777)
-Port=7777
-
-// Copy Steam client DLLs when packaging (Windows only)
-bCopySteamDlls=True
-
-// Enable Steam VAC
-bVACEnabled=True
-
-// Use Steam's networking layer
+// Use the SteamCoreSockets socket subsystem as the default socket subsystem
 bUseSteamNetworking=True
 
-// Allow fallback to Steam relay servers if direct P2P fails
+// True: route traffic through the Steam relay network using Steam (P2P) addresses.
+// False: connect directly via IP address (e.g. "open 1.2.3.4:7777").
+// Can be overridden with the -SteamCoreSocketsRelays=true/false launch parameter.
 bAllowP2PPacketRelay=True
 
-// Relaunch game in Steam if not already started via Steam
+// Development builds only: relaunch the game through the Steam client if it was not started via Steam
 bRelaunchInSteam=False
 
-// Timeout duration for P2P connections
-P2PConnectionTimeout=90
-
-// Steam server query port
-GameServerQueryPort=27015
-
-// Game version
-GameVersion=1.0.0.0
-
-// If true, prevents the game from being relaunched through Steam 
-// when running as a Shipping build. (Requires SteamCore PRO version 1.0.6.9 and later)
+// Shipping builds are always relaunched through Steam if not started via Steam.
+// Set to True to disable this, e.g. to test Shipping builds locally.
+// When True, steam_appid.txt is written next to the executable. (Requires SteamCore PRO 1.0.6.9 and later)
 bDisableSteamRelaunchInShipping=False
 
-// Override net.MinHandshakeVersion
+// Dedicated servers: enable VAC (secure mode)
+bVACEnabled=True
+
+// Dedicated servers: Steam query port (can be overridden with -QueryPort=)
+GameServerQueryPort=27015
+
+// Dedicated servers: game version, must match the version set in the Steamworks partner site.
+// Server advertising will fail if this is not set.
+GameVersion=1.0.0.0
+
+// Dedicated servers: product name and description sent to Steam (defaults to the SteamAppId)
+GameServerProductName=MyGame
+GameServerGameDescription=My Game
+
+// Also initialize the Steam game server API on clients/listen servers (default: False)
+bInitServerOnClient=False
+
+// Windows Server targets only (build time): copy steamclient(64).dll, tier0_s(64).dll and
+// vstdlib_s(64).dll from your local Steam installation into the packaged server.
+// The build fails if Steam is installed but any of these files are missing.
+bCopySteamDlls=True
+
+// Online Identity: default token type for GetLinkedAccountAuthToken (App, Session or WebAPI[:identity])
+DefaultLinkedAccountAuthTokenType=App
+
+// Online Identity: remote service identity used for WebAPI tokens when none is specified
+DefaultRemoteServiceIdentity=
+
+// Override net.MinHandshakeVersion / net.CurrentHandshakeVersion
 bOverrideMinHandshakeVersion=True
 MinHandshakeVersion=0
-
-// Override net.CurrentHandshakeVersion
 bOverrideCurrentHandshakeVersion=True
 CurrentHandshakeVersion=0
 ```
+
+:::note Server Port
+The game/listen port is **not** configured in the `[OnlineSubsystemSteamCore]` section. It is read from the engine's `[URL]` section (default `7777`) or from the `-Port=` [launch parameter](../parameters.md):
+
+```ini
+[URL]
+Port=7777
+```
+:::
+
+:::warning Handshake Version Overrides
+If `bOverrideMinHandshakeVersion` / `bOverrideCurrentHandshakeVersion` are **not** present in your DefaultEngine.ini, they are treated as `True` and both `net.MinHandshakeVersion` and `net.CurrentHandshakeVersion` are set to `0` when the plugin starts.
+
+If you want to keep Unreal Engine's default handshake versions, explicitly disable the overrides:
+
+```ini
+[OnlineSubsystemSteamCore]
+bOverrideMinHandshakeVersion=False
+bOverrideCurrentHandshakeVersion=False
+```
+:::
 
 :::warning ⚠️ Project Settings Deprecated
 Support for editing these settings via Project Settings has been removed in recent plugin versions. You must now configure everything through DefaultEngine.ini.

@@ -8,7 +8,7 @@
 - The SteamCoreSockets NetDriver is configured in your projects **DefaultEngine.ini**
 
 :::warning NOTE
-Double check your configuration and make sure that you do not have any duplicate entires and that you are using the correct settings shown below, if any of them are missing multiplayer **will not work**.
+Double check your configuration and make sure that you do not have any duplicate entries and that you are using the correct settings shown below, if any of them are missing multiplayer **will not work**.
 :::
 
 ```cpp
