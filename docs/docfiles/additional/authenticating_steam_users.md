@@ -31,11 +31,11 @@ THE BLUEPRINT NODES ARE NOT REQUIRED AND SHOULD NOT BE USED IF YOU ARE USING THE
 ## Begin Auth Session
 Depending on your setup, if you are using Dedicated Servers to authenticate users use “GameServer” example, if you are using a “Single Player” or “Listen Server” setup use the “User” example.
 
-![Image](https://eeldev.com/wp-content/uploads/2020/12/56557582ebd0729ae59b2ae335a720d8.png)
+![Image](../../../static/img/legacy/2020-12-56557582ebd0729ae59b2ae335a720d8.png)
 
 ## Cleaning Up
 Destroy/Invalidate the authentication ticket when the player exits the game (Inside the PlayerController)
 
-![Image](https://eeldev.com/wp-content/uploads/2020/02/cleanup.png)
+![Image](../../../static/img/legacy/2020-02-cleanup.png)
 
 :::

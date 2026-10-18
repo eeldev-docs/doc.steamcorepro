@@ -35,7 +35,7 @@ This method is simpler to use but exposes less server information. The results c
 - **On Callback** fires once for **each** server that is found. It returns a **Game Server Item** with fields such as **Server Name**, **Map Name**, **Game Tags**, **Ping**, **Players**, **Max Players**, **Password** and the server address.
 - **On Refresh Completed** fires once when the search is finished. Use it to hide a loading indicator or show a "no servers found" message.
 
-**On Refresh Completed** always fires, also when the search times out, fails or is cancelled. (Requires SteamCore PRO 1.1.11 and later.)
+**On Refresh Completed** always fires, also when the search times out, fails or is cancelled. (Requires SteamCore PRO 1.1.10 and later.)
 
 ### Other Server Lists
 The same inputs and outputs are used by **Request LAN Server List**, **Request Friends Server List**, **Request Favorites Server List**, **Request History Server List** and **Request Spectator Server List**.

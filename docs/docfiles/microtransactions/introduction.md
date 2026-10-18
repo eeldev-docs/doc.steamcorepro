@@ -27,7 +27,7 @@ To enable microtransactions, configure the **SteamCore::Web** plugin settings in
 2. Set your **Web API Key** obtained from Valve.
 3. Enable **Sandbox Mode** for the MicroTXN Interface to test transactions without real payments.
 
-![SteamCore::Web Plugin Settings](https://eeldev.com/wp-content/uploads/2020/02/62739ebaf984676932c26e9072914a88-1.png)
+![SteamCore::Web Plugin Settings](../../../static/img/legacy/2020-02-62739ebaf984676932c26e9072914a88-1.png)
 
 ## Setting Up Steamworks Inventory Service
 Enable the Inventory Service in your Steamworks application settings to support microtransactions.
@@ -35,7 +35,7 @@ Enable the Inventory Service in your Steamworks application settings to support 
 1. Navigate to **Steamworks Settings** > **Community** > **Inventory Service**.
 2. Check **Enable Inventory Service**.
 
-![Steamworks Inventory Service Settings](https://eeldev.com/wp-content/uploads/2020/02/1_steamworks.png)
+![Steamworks Inventory Service Settings](../../../static/img/legacy/2020-02-1_steamworks.png)
 
 ## Defining Purchasable Items
 Define the items players can purchase in your game using the Steamworks Inventory Service schema. See the [Steamworks Inventory Schema Documentation](https://partner.steamgames.com/doc/features/inventory/schema) for details.
@@ -94,7 +94,7 @@ Create a JSON schema for your items, specifying details like `itemdefid`, `type`
 }
 ```
 
-![Item Definition Example](https://eeldev.com/wp-content/uploads/2020/02/3_itemDef.png)
+![Item Definition Example](../../../static/img/legacy/2020-02-3_itemDef.png)
 
 ## Initiating a Transaction
 To start a purchase, use the **Initiate Purchase** node to trigger a transaction for specific items. For example, the following Blueprint initiates a purchase for a "Rifle" (ItemDefID: 10) and a "Bat" (ItemDefID: 100).
@@ -103,7 +103,7 @@ To start a purchase, use the **Initiate Purchase** node to trigger a transaction
 The screenshot below uses the item definitions from the Example Project (shown in the table at the bottom of the screenshot), not the JSON schema above. Use the `itemdefid` values from **your own** schema, and only items that have a `price` set can be purchased (for example, the `playtimegenerator` item in the schema above cannot be bought).
 :::
 
-![Initiate Purchase Node](https://eeldev.com/wp-content/uploads/2020/02/4_initiate.png)
+![Initiate Purchase Node](../../../static/img/legacy/2020-02-4_initiate.png)
 
 ### Steps
 1. Add the **Initiate Purchase** node to your game logic (e.g., in a UI Blueprint triggered by a "Buy" button).
@@ -115,12 +115,12 @@ Watch a short demo of purchasing a "Bat" item. For a complete example, download 
 
 import ReactPlayer from 'react-player'
 
-<ReactPlayer url='https://eeldev.com/wp-content/uploads/2020/02/19076f72082d7b1de554fc1f665a2144.mp4' controls={true}/>
+<ReactPlayer url='/img/legacy/2020-02-19076f72082d7b1de554fc1f665a2144.mp4' controls={true}/>
 
 ## Finalizing a Transaction
 After the player confirms the purchase via the Steam Overlay, finalize the transaction to complete the process and grant the items to the player. You can use the **Finalize Purchase** node provided by **SteamCore::Web** or implement custom logic.
 
-![Finalize Purchase Node](https://eeldev.com/wp-content/uploads/2020/02/web_microtransaction_2-3.png)
+![Finalize Purchase Node](../../../static/img/legacy/2020-02-web_microtransaction_2-3.png)
 
 ### Steps
 1. Listen for the **MicroTxnAuthorizationResponse** event to detect when the player authorizes or denies the transaction.

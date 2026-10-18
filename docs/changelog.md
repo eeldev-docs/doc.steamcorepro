@@ -4,9 +4,15 @@ sidebar_position: 5
 
 # Changelog
 
-## 1.1.11
+## 1.1.10
 
 ### Fixes
+- **Dedicated servers.** Game server callbacks for several interfaces were registered before they were marked as game server callbacks, so they never fired on dedicated servers.
+- **Steam Input.** Callback data is now copied, so the values in Steam Input events are no longer invalid.
+- **SteamCoreSockets.** Receiving data now reports the correct number of bytes and releases the received messages.
+- **Memory.** Fixed a crash in **Get UGC Details** and buffer issues in **Get Beta Info** and **Filter Text**.
+- **Server port.** The game server port now defaults to `7777` when no port is configured.
+- **Linux.** The `steamclient.so` path now matches the server architecture.
 - **Async nodes always complete.** Server list, Ping Server and Server Rules nodes now always fire their completion output, also on timeout, cancellation, errors or when the SteamCore online subsystem is not available. Async nodes no longer leak when the online subsystem is missing.
 - **Server browser.** Starting a new server list, ping or rules request now cancels the previous one, as intended. Previously a new request could cancel or release another request's results.
 - **Server lists finish earlier.** A server list request now completes one second after Steam reports that the refresh is complete, instead of waiting for the timeout.
@@ -26,5 +32,5 @@ sidebar_position: 5
 - The legacy `SteamCoreNetDriver` has been removed. It could never be activated, so projects that referenced it were already using their `DriverClassNameFallback`. Use the [SteamCoreSockets](./docfiles/multiplayer/configuring_steamsockets.md) net driver instead.
 
 ### Documentation
-- New guides: [Achievements and Stats](./docfiles/features/achievements_and_stats.md), [Leaderboards](./docfiles/features/leaderboards.md) and [Cloud Saves](./docfiles/features/cloud_saves.md).
+- New guides: [Using Your Own App ID](./docfiles/getting_started/using-own-app-id.md), [Achievements and Stats](./docfiles/features/achievements_and_stats.md), [Leaderboards](./docfiles/features/leaderboards.md), [Cloud Saves](./docfiles/features/cloud_saves.md), [Rich Presence](./docfiles/features/rich_presence.md), [Steam Workshop](./docfiles/features/workshop.md), [Steam Inventory](./docfiles/features/inventory.md), [Steam Input](./docfiles/features/steam_input.md) and [Steam Timeline](./docfiles/features/timeline.md).
 - Expanded [Finding the Server](./docfiles/multiplayer/dedicated-servers/finding-server.md) and [Friend Avatars](./docfiles/multiplayer/friends/friends_list_avatars.md).

@@ -12,26 +12,26 @@ There are 2 methods for filtering dedicated server results and that is by using 
 ## Filtering using Tags
 Tags are separated by “,” comma sign, in this case we’ll use the tags “dedicated” and “modded” as an example.
 
-![Tags](https://eeldev.com/wp-content/uploads/2020/04/createserver.png)
+![Tags](../../../../static/img/legacy/2020-04-createserver.png)
 
 ### Filtering the Results
 In this example we’re going to filter out all servers that are not Dedicated
 
-![Filter](https://eeldev.com/wp-content/uploads/2020/04/filter.png)
+![Filter](../../../../static/img/legacy/2020-04-filter.png)
 
 ## Filtering using Server Object
 We must first construct the object that we will set our filtering options on.
 
-![Create](https://eeldev.com/wp-content/uploads/2020/05/construct-1.png)
+![Create](../../../../static/img/legacy/2020-05-construct-1.png)
 
 ### Setting the Filters
-![Filters](https://eeldev.com/wp-content/uploads/2020/05/filters1.png)
+![Filters](../../../../static/img/legacy/2020-05-filters1.png)
 
 
 ### Applying Filters
 This will only return Linux servers that has No Players
 
-![Apply](https://eeldev.com/wp-content/uploads/2020/05/applying.png)
+![Apply](../../../../static/img/legacy/2020-05-applying.png)
 
 ## Additional Filters
-![More](https://eeldev.com/wp-content/uploads/2020/05/filters2.png)
+![More](../../../../static/img/legacy/2020-05-filters2.png)

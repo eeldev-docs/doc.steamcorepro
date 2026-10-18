@@ -2,7 +2,6 @@
 In this example we’re going to take a look how to transition from a Lobby to a Game Session using only Blueprints and SteamCore.
 
 # CREATING THE LOBBY
-![Creating](https://eeldev.com/wp-content/uploads/2021/07/createlobby.jpg)
 
 Creating a Steam lobby is rather simple, all you have to do is call the “Create Lobby” function, for a complete lobby setup see the SteamCore Example Project
 

@@ -12,6 +12,6 @@ Go to the Steamworks settings for your application and change the "Dedicated Gam
 - [Link to Steamworks](https://partner.steamgames.com/home)
 - The page is located at `https://partner.steamgames.com/apps/dedicatedservers/<YourAppId>`
 
-![Image](https://eeldev.com/wp-content/uploads/2020/10/f914c0b7e9aa5e30938e0ffd289474a9.png)
+![Image](../../../../static/img/legacy/2020-10-f914c0b7e9aa5e30938e0ffd289474a9.png)
 
 The version must match the `GameVersion` set in the `[OnlineSubsystemSteamCore]` section of your DefaultEngine.ini, see [Configuring the Plugin](../../getting_started/configuring-plugin.md). Server advertising fails if the versions do not match.

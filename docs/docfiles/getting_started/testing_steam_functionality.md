@@ -40,7 +40,7 @@ To test Steam functionality within the Unreal Editor, launch a **Standalone Game
 
 Launch a standalone instance to initialize Steam.
 
-![Standalone UE4](https://eeldev.com/wp-content/uploads/2021/01/7f0bfa893518c85d953db53d9af0099d-1.png)
+![Standalone UE4](../../../static/img/legacy/2021-01-7f0bfa893518c85d953db53d9af0099d-1.png)
 
 ### UE5
 

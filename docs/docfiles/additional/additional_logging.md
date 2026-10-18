@@ -29,4 +29,4 @@ You can also enable a log category for a single run with a launch parameter, e.g
 ## Finding Logs
 Logs are always generated in your projects Saved directory, see the screenshot below.
 
-![Logs](https://eeldev.com/wp-content/uploads/2021/12/Screenshot-2021-12-08-135657.png)
+![Logs](../../../static/img/legacy/2021-12-Screenshot-2021-12-08-135657.png)
