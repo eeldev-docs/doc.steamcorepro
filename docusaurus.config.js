@@ -73,7 +73,7 @@ const config = {
           */
           //{to: '/blog', label: 'Changelogs', position: 'left'},
           { href: 'https://eeldev.com', label: 'eeldev.com' },
-          { href: 'https://www.unrealengine.com/marketplace/slug/459e1c72939b4ead8b5132187808a3e7', label: 'Unreal Marketplace' },
+          { href: 'https://www.fab.com/listings/d101542d-2534-4b2c-be16-e9b3e5cd4d04', label: 'Fab' },
           { href: 'https://www.youtube.com/channel/UC6Rhr_F5BxwfTtcADVPUNYA', label: 'YouTube', position: 'right' },
           { href: 'https://discord.gg/3Yu7pEy', label: 'Discord', position: 'right'},
           { href: 'https://twitter.com/dryeeldev', label: 'Twitter', position: 'right' },

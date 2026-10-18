@@ -112,7 +112,7 @@ bInitServerOnClient=False
 
 // Windows Server targets only (build time): copy steamclient(64).dll, tier0_s(64).dll and
 // vstdlib_s(64).dll from your local Steam installation into the packaged server.
-// The build fails if Steam is installed but any of these files are missing.
+// Files that are missing are skipped and a warning is printed in the build log.
 bCopySteamDlls=True
 
 // Online Identity: default token type for GetLinkedAccountAuthToken (App, Session or WebAPI[:identity])

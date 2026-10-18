@@ -10,9 +10,8 @@ This Example has a Video Tutorial that you can find here: [Related Video](../../
 Go to the Steamworks settings for your application and change the "Dedicated Game Servers Information" to include the latest version for your game, see the example below.
 
 - [Link to Steamworks](https://partner.steamgames.com/home)
+- The page is located at `https://partner.steamgames.com/apps/dedicatedservers/<YourAppId>`
 
 ![Image](https://eeldev.com/wp-content/uploads/2020/10/f914c0b7e9aa5e30938e0ffd289474a9.png)
 
-<button onClick={() => alert('button clicked!')}>Click me!</button>
-
-* https://partner.steamgames.com/apps/dedicatedservers/yourappid
+The version must match the `GameVersion` set in the `[OnlineSubsystemSteamCore]` section of your DefaultEngine.ini, see [Configuring the Plugin](../../getting_started/configuring-plugin.md). Server advertising fails if the versions do not match.

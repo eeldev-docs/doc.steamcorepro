@@ -38,7 +38,7 @@ To use Steam features (e.g., matchmaking, server visibility), you must include t
 ### Windows Server
 
 :::tip Automatic copying
-When you package a Windows **Server** target on a machine with the Steam client installed, the plugin automatically copies `steamclient(64).dll`, `tier0_s(64).dll` and `vstdlib_s(64).dll` from your Steam installation into the packaged server (controlled by `bCopySteamDlls`, enabled by default). The build fails if any of these files are missing. Only follow the manual steps below if you disabled `bCopySteamDlls` or packaged on a machine without Steam. See [Configuring the Plugin](../../getting_started/configuring-plugin.md).
+When you package a Windows **Server** target on a machine with the Steam client installed, the plugin automatically copies `steamclient(64).dll`, `tier0_s(64).dll` and `vstdlib_s(64).dll` from your Steam installation into the packaged server (controlled by `bCopySteamDlls`, enabled by default). If any of these files are missing, they are skipped and a warning is printed in the build log. Only follow the manual steps below if you see that warning, disabled `bCopySteamDlls` or packaged on a machine without Steam. See [Configuring the Plugin](../../getting_started/configuring-plugin.md).
 :::
 
 1. **Locate the Steamclient Libraries**:

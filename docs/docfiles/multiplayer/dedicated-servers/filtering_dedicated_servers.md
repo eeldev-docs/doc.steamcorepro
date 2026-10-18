@@ -24,8 +24,6 @@ We must first construct the object that we will set our filtering options on.
 
 ![Create](https://eeldev.com/wp-content/uploads/2020/05/construct-1.png)
 
-We must first construct the object that we will set our filtering options on.
-
 ### Setting the Filters
 ![Filters](https://eeldev.com/wp-content/uploads/2020/05/filters1.png)
 

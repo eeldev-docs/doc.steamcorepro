@@ -35,6 +35,10 @@ const sidebars = {
       type: 'doc',
       id: 'faq'
     },
+    {
+      type: 'doc',
+      id: 'changelog'
+    },
     /*
     {
       type: 'link',
