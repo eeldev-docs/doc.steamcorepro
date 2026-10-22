@@ -56,4 +56,6 @@ Items can be sold with Steam's in-game purchase flow:
 - **Request Prices** loads the prices in the player's currency. Then use **Get Items With Prices** or **Get Item Price**.
 - **Start Purchase** opens the Steam purchase dialog for a list of item definitions.
 
+Before you show trading or Community Market features, call **Get Market Eligibility** on **Get Steam User**. **Data → bAllowed** is false if the player can't use the Market, and **Not Allowed Reason Flags** and **Allowed At Time** say why and until when.
+
 For purchases handled by your own backend, see [Microtransactions](../microtransactions/introduction.md).

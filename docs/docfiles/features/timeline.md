@@ -52,3 +52,13 @@ Game phases group a stretch of play, such as one match or one level, so the play
 3. Call **End Game Phase** when the match ends.
 
 **Open Overlay to Game Phase** and **Open Overlay to Timeline Event** open the Steam overlay at a phase or an event, for example from a match history screen.
+
+## Checking for Recordings
+Before you offer to open the overlay, you can check whether Steam has any recording for an event or a phase:
+
+| Node | Description |
+| --- | --- |
+| **Does Event Recording Exist** | Takes the event handle. **Data → bRecordingExists** is true if Steam has a recording of the event. |
+| **Does Game Phase Recording Exist** | Takes a phase ID from **Set Game Phase ID**. **Data** contains the recording length, the longest clip, and the number of clips and screenshots. |
+
+Both nodes are async and are available as callback functions and as async nodes in the **SteamCore|Timeline|Async** category.

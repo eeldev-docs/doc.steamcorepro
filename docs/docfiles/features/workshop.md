@@ -28,6 +28,7 @@ Steam Workshop lets players upload, browse and subscribe to user generated conte
    | **Set Item Preview** | The **absolute** path to a preview image. |
    | **Set Item Tags** | Tags players can filter by. |
    | **Set Item Visibility** | Public, friends only, private or unlisted. |
+   | **Add Item Key Value Tag** | A key-value pair that queries can filter by with **Add Required Key Value Tag**. **Remove All Item Key Value Tags** clears the existing ones first. |
 
 4. Call **Submit Item Update** with the update handle and a change note.
 
@@ -55,6 +56,9 @@ What you do with the content depends on your game, for example loading map files
 
 Players subscribe in the Steam Workshop or in your game with **Subscribe Item** and **Unsubscribe Item**.
 
+### Downloaded Items
+Items can also be downloaded without a subscription, for example on a dedicated server or when the game downloads an item another player is using. **Get Num Downloaded Items** and **Get Downloaded Items** list them. Call **Mark Downloaded Item As Unused** when you no longer need an item, so Steam can remove it from the local cache.
+
 ## Browsing Items
 1. Create a query:
    - **Create Query All UGC Request** for all items, for example the most popular ones.
@@ -64,6 +68,15 @@ Players subscribe in the Steam Workshop or in your game with **Subscribe Item** 
 4. Call **Release Query UGC Request** when you are done with the results.
 
 The **Page** input of the create nodes selects the result page. Steam returns up to 50 results per page.
+
+### Filtering by Date
+Call **Set Time Created Date Range** or **Set Time Updated Date Range** on the query handle before sending it to only return items created or updated between two dates. Both dates are in UTC.
+
+### Content Descriptors
+Items can be marked with content descriptors, such as violence or nudity:
+- **Add Content Descriptor** and **Remove Content Descriptor** set them on an item update.
+- **Get Query UGC Content Descriptors** returns them for a query result.
+- **Get User Content Descriptor Preferences** returns the descriptors the player has chosen to hide, so you can filter items in your own UI.
 
 ## Troubleshooting
 - **Create Item fails:** make sure the Workshop is enabled and published in Steamworks, and that **Consumer App ID** is your own App ID.

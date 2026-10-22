@@ -65,6 +65,7 @@ Before using the cloud, check **Is Cloud Enabled for Account** and **Is Cloud En
 | **File Forget** | Removes the file from the cloud but keeps the local copy. |
 | **Get File Count** / **Get File Name and Size** | List all cloud files for the user. |
 | **Get Quota** | Total and available bytes for the user. |
+| **Get User Data Folder** (on **Get Steam User**) | The local Steam userdata folder for the player and game, for files you manage yourself. |
 
 ## Testing
 - Steam must be running and the game must use your own App ID.
