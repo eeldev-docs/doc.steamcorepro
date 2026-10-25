@@ -62,6 +62,14 @@ To fetch entries for specific players, use **Download Leaderboard Entries for Us
 | **Get Leaderboard Sort Method** / **Get Leaderboard Display Type** | The settings configured in Steamworks. |
 | **Attach Leaderboard UGC** | Attaches user generated content, such as a replay, to the player's entry. |
 
+## Example
+This Blueprint uses a variable **Leaderboard** of type **Steam Leaderboard**:
+- **FindHighscores** finds the leaderboard `Highscores` and stores the handle in **Leaderboard**. Call it first, for example from **BeginPlay**.
+- **UploadScore** uploads a score with **Keep Best** and prints the player's new rank.
+- **ShowTopTen** downloads the top ten entries and prints the name and score of each player.
+
+![Leaderboard example](../../../static/img/leaderboards_example.webp)
+
 ## Troubleshooting
 - **bLeaderboardFound is false:** check the name (it is case sensitive) and that the leaderboard is published in Steamworks.
 - **No entries are returned:** with **Keep Best**, a worse score does not change the leaderboard; check **bScoreChanged** in the upload result.
