@@ -43,10 +43,11 @@ Instead of polling digital actions, you can call **Enable Action Event Callbacks
 To show the correct button icon for an action:
 
 1. Call **Get Digital Action Origins** with the controller, action set and action handle.
-2. Pass an origin to **Get Glyph PNG for Action Origin**. It returns the path to an image file.
-3. Load the image with Unreal's **Import File as Texture 2D** node and show it in your UI.
+2. Pass an origin to **Get Glyph Texture for Action Origin**. It returns a texture you can use directly in an **Image** widget. Textures are cached, so you can call it whenever the UI needs the glyph. Requires SteamCore PRO 1.1.12 or newer.
 
-**Get String for Action Origin** returns a readable name, such as "A Button".
+**Get Glyph PNG for Action Origin** returns the path to the image file instead, if you want to load it yourself. **Get String for Action Origin** returns a readable name, such as "A Button".
+
+If your game uses Enhanced Input instead of action sets, see [Steam Deck and Steam Hardware](./steam_hardware.md) for glyphs based on Unreal's gamepad keys.
 
 ## Other Useful Nodes
 | Node | Description |
