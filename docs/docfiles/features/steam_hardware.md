@@ -29,6 +29,14 @@ Leave **Handle** unconnected to use the first connected controller. If no contro
 
 To update the glyphs when the player switches controller, call **Listen for Controller Change** and refresh your UI in **On Controller Changed**.
 
+### Example
+This Widget Blueprint shows two glyphs in the Image widgets **KeyGlyphImage** and **ActionGlyphImage**:
+- **UpdateKeyGlyph** shows the glyph for **Gamepad Face Button Bottom**.
+- **UpdateActionGlyph** shows the glyph for the **Jump** action in the **InGameControls** action set, using the first connected controller.
+- **ListenForGlyphChanges** updates both glyphs, and updates them again when the player switches controller. Call it from **Event Construct**.
+
+![Glyph example](../../../static/img/steam_hardware/glyph_example.webp)
+
 ## Entering Text
 Steam has two on-screen keyboards. The nodes return **On Failure** when Steam can't show the keyboard, which happens when Steam isn't in Big Picture mode and the game isn't running on Steam hardware. Use your regular text input in that case.
 
