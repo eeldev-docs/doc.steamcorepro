@@ -19,7 +19,7 @@ The Steam Inventory Service stores items for each player on Steam, for example c
 Most inventory nodes do not return items directly. They return a **result handle**, and Steam fires an event when the result is ready:
 
 1. Call a node such as **Get All Items**. It returns a **Steam Inventory Result**.
-2. Use **Get Steam Inventory** and bind **Steam Inventory Result Ready**. When it fires, compare **Handle** with the handle you got and check **Result**.
+2. Use **Get Steam Inventory** and bind **Steam Inventory Result Ready**. When it fires, compare **Handle** with the handle you got using the **==** node, and check **Result**.
 3. Call **Get Result Items** with the handle. Each item has an **Instance ID**, a **Definition** (the itemdefid) and a **Quantity**.
 4. Call **Destroy Result** with the handle when you are done.
 
@@ -53,6 +53,13 @@ The client's inventory can be modified by cheaters. If items matter for gameplay
 
 ## Inspecting Items
 **Inspect Item** takes an item token and returns the item it refers to, for example when another player shares an item to be inspected. Handle the result as described in [How Results Work](#how-results-work). Requires SteamCore PRO 1.1.12 or newer.
+
+### Example
+The example below binds **Steam Inventory Result Ready**, calls **Inspect Item** and saves the handle. When the result is ready, it checks that the handle matches, reads the items with **Get Result Items** and destroys the result.
+
+`InspectResult` is a variable of type **Steam Inventory Result**. Use the **Items** output of **Get Result Items** to show the item.
+
+![Inspect Item example](../../../static/img/inventory_inspect_item.png)
 
 ## Selling Items
 Items can be sold with Steam's in-game purchase flow:
