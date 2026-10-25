@@ -19,3 +19,11 @@
 - Make sure that you do not call this function before **Read Friend List** has returned **Completed**
 
 ![Image](../../../../static/img/friends_list.png)
+
+## Example Using the Steamworks Nodes
+This Blueprint uses the **SteamCore|Friends** nodes directly:
+- **ShowMyName** prints your own Steam name with **Get Persona Name**.
+- **ListFriends** gets the number of friends with **Get Friend Count**, loops over them with **Get Friend By Index** and prints each name with **Get Friend Persona Name**. Both nodes take the same **Flags**; **Immediate** means regular friends. If **Flags** is empty, **Get Friend Count** returns 0.
+- **OpenFriendsOverlay** opens the friends list in the Steam overlay with **Activate Game Overlay**.
+
+![Friends example](../../../../static/img/friends_example.webp)

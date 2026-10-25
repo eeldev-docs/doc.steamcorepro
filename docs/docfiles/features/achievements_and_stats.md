@@ -72,6 +72,14 @@ Use **Get Steam User Stats** and bind the events you need:
 
 Call **Store Stats** afterwards. Do not ship these calls in your game.
 
+## Example
+This Blueprint uses the stat `Kills` and the achievement `KILL_100`. Replace them with your own API names:
+- **UnlockAchievement** unlocks the achievement passed in **Achievement Name** and stores it.
+- **AddKills** adds **Amount** to `Kills`, shows the progress toward `KILL_100` and stores the stats.
+- **ListAchievements** prints the display name of every achievement and whether it is unlocked.
+
+![Achievements and stats example](../../../static/img/achievements_example.webp)
+
 ## Troubleshooting
 - **Nothing happens:** check that the API name matches exactly (it is case sensitive), that your changes are published in Steamworks, and that you are not using App ID 480 with your own achievement names.
 - **Store Stats returns false:** Steam is not running or the game was not started through Steam. See [Testing Steam Functionality](../getting_started/testing_steam_functionality.md).

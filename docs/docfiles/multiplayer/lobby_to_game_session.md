@@ -5,6 +5,8 @@ In this example we’re going to take a look how to transition from a Lobby to a
 
 Creating a Steam lobby is rather simple, all you have to do is call the “Create Lobby” function, for a complete lobby setup see the SteamCore Example Project
 
+See [Lobbies](lobbies.md) for how to create, find and join lobbies.
+
 
 # LISTENING FOR GAME CREATED
 ![Listening](../../../static/img/listen-8b8d9ab41f7ec4a1e8410754c54ada79.jpg)
