@@ -51,6 +51,9 @@ The client's inventory can be modified by cheaters. If items matter for gameplay
 2. On the server, call **Deserialize Result** with the bytes.
 3. When the result is ready, call **Check Result Steam ID** with the player's Steam ID. Only trust the items if it returns `true`.
 
+## Inspecting Items
+**Inspect Item** takes an item token and returns the item it refers to, for example when another player shares an item to be inspected. Handle the result as described in [How Results Work](#how-results-work). Requires SteamCore PRO 1.1.12 or newer.
+
 ## Selling Items
 Items can be sold with Steam's in-game purchase flow:
 - **Request Prices** loads the prices in the player's currency. Then use **Get Items With Prices** or **Get Item Price**.
