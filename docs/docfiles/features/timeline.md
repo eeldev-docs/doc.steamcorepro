@@ -62,3 +62,11 @@ Before you offer to open the overlay, you can check whether Steam has any record
 | **Does Game Phase Recording Exist** | Takes a phase ID from **Set Game Phase ID**. **Data** contains the recording length, the longest clip, and the number of clips and screenshots. |
 
 Both nodes are async and are available as callback functions and as async nodes in the **SteamCore|Timeline|Async** category.
+
+## Example
+This Blueprint uses a variable **BossFightEvent** of type **Timeline Event Handle**:
+- **StartBossFight** sets the game mode to **Playing**, starts a featured range event and stores it in **BossFightEvent**, and shows a tooltip.
+- **EndBossFight** ends the range event, clears the tooltip and adds an instantaneous event for the win.
+- **OpenPauseMenu** sets the game mode to **Menus**.
+
+![Timeline example](../../../static/img/timeline_example.webp)

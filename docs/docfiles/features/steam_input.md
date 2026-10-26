@@ -57,3 +57,11 @@ If your game uses Enhanced Input instead of action sets, see [Steam Deck and Ste
 | **Set LED Color** | Changes the light bar color on supported controllers. |
 | **Get Motion Data** | Gyro and accelerometer data. |
 | **Activate Action Set Layer** | Adds a layer on top of the active action set, for example while aiming. |
+
+## Example
+This Blueprint uses the variables **Controller** of type **Input Handle** and **JumpAction** of type **Input Digital Action Handle**:
+- **InitSteamInput** initializes Steam Input, stores the first connected controller in **Controller**, activates the `InGameControls` action set and stores the `Jump` action in **JumpAction**.
+- **ReadJump** prints a message while **Jump** is pressed. Call it from **Event Tick**.
+- **OpenControllerBindings** opens the Steam binding panel for **Controller**.
+
+![Steam Input example](../../../static/img/steam_input_example.webp)

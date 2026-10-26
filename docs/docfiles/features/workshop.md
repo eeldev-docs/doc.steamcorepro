@@ -78,6 +78,12 @@ Items can be marked with content descriptors, such as violence or nudity:
 - **Get Query UGC Content Descriptors** returns them for a query result.
 - **Get User Content Descriptor Preferences** returns the descriptors the player has chosen to hide, so you can filter items in your own UI.
 
+## Example
+- **UploadItem** creates a new item with **Get App ID** as **Consumer App ID**, sets the **Title** and **Content Folder** and submits the update with a 300 second timeout. **Content Folder** must be an absolute path.
+- **ListInstalledItems** loops over the player's subscribed items and prints the install folder of each item that is installed.
+
+![Workshop example](../../../static/img/workshop_example.webp)
+
 ## Troubleshooting
 - **Create Item fails:** make sure the Workshop is enabled and published in Steamworks, and that **Consumer App ID** is your own App ID.
 - **Submit Item Update fails:** check that the content folder and preview image paths are absolute and exist, and that the preview image is within the Steam Cloud quota.

@@ -67,6 +67,13 @@ Before using the cloud, check **Is Cloud Enabled for Account** and **Is Cloud En
 | **Get Quota** | Total and available bytes for the user. |
 | **Get User Data Folder** (on **Get Steam User**) | The local Steam userdata folder for the player and game, for files you manage yourself. |
 
+### Example
+- **SaveToCloud** checks that Steam Cloud is enabled for the account and the app, converts **Text** to bytes and writes it to `save.txt`.
+- **LoadFromCloud** checks that `save.txt` exists, reads it and prints the text.
+- **ListCloudFiles** prints the name and size of every cloud file for the user.
+
+![Cloud saves example](../../../static/img/cloud_saves_example.webp)
+
 ## Testing
 - Steam must be running and the game must use your own App ID.
 - In the Steam client, open the game's **Properties → General** and make sure Steam Cloud is enabled.
