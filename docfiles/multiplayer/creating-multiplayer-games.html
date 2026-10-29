@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.7.0">
 <title data-rh="true">Creating Sessions | SteamCore PRO Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://steamcore-pro.eeldev.com/docfiles/multiplayer/creating-multiplayer-games"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Creating Sessions | SteamCore PRO Documentation"><meta data-rh="true" name="description" content="Learn how to create and set up multiplayer game sessions in Unreal Engine using the SteamCore plugin."><meta data-rh="true" property="og:description" content="Learn how to create and set up multiplayer game sessions in Unreal Engine using the SteamCore plugin."><link data-rh="true" rel="icon" href="/img/eeldev_icon.png"><link data-rh="true" rel="canonical" href="https://steamcore-pro.eeldev.com/docfiles/multiplayer/creating-multiplayer-games"><link data-rh="true" rel="alternate" href="https://steamcore-pro.eeldev.com/docfiles/multiplayer/creating-multiplayer-games" hreflang="en"><link data-rh="true" rel="alternate" href="https://steamcore-pro.eeldev.com/docfiles/multiplayer/creating-multiplayer-games" hreflang="x-default"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"><link rel="stylesheet" href="/assets/css/styles.9169be46.css">
-<script src="/assets/js/runtime~main.1760743a.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.98e6fee4.js" defer="defer"></script>
 <script src="/assets/js/main.64e62715.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -53,7 +53,8 @@
 <li>Set the level name (e.g., <code>YourMultiplayerMap</code>) and the parameter <code>listen</code> in options.</li>
 <li>Execute the flow to start the session and listen for connections.</li>
 </ul>
-<p><img decoding="async" loading="lazy" alt="Create SteamCore Session Example" src="/assets/images/create_session-d70c1b78d70e617fe6c71d8f2b5b449a.png" width="1319" height="708" class="img_wQsy"></p>
+<p>The example below creates a session with the setting <code>UsingSteamCore</code> = 1, which <a href="/docfiles/multiplayer/finding-multiplayer-games">Finding Sessions</a> filters on. On success it opens <code>ThirdPersonExampleMap</code> with the option <code>listen</code>; on failure it prints a message.</p>
+<p><img decoding="async" loading="lazy" alt="Create SteamCore Session Example" src="/assets/images/create_session_example-00a577e37c9005fb0e169d8cd7dd2547.png" width="1596" height="768" class="img_wQsy"></p>
 <h2 class="anchor anchorWithStickyNavbar_FNw8" id="notes">Notes<a href="#notes" class="hash-link" aria-label="Direct link to Notes" title="Direct link to Notes">​</a></h2>
 <ul>
 <li><strong>Session Success</strong>: Ensure the <strong>Create SteamCore Session</strong> node completes successfully before opening the level with <code>listen</code>. Add error handling for failed session creation.</li>
