@@ -28,6 +28,14 @@ Call **Get All Items** and handle the result as described above. **Steam Invento
 
 To show names and icons, call **Load Item Definitions** once, then **Get Item Definition Property** with the item's **Definition** and a property name such as `name` or `icon_url`. **Steam Inventory Definition Update** fires when the definitions are loaded or change.
 
+### Example
+`ListResult` is a variable of type **Steam Inventory Result**:
+- **BeginPlay** binds **Steam Inventory Result Ready**.
+- **ListItems** loads the item definitions, calls **Get All Items** and saves the handle in `ListResult`.
+- **OnInventoryResultReady** checks that the handle is `ListResult`, prints the `name` and quantity of each item, and destroys the result.
+
+![Listing items example](../../../static/img/inventory_example.png)
+
 ## Granting Items
 | Node | Use it for |
 | --- | --- |

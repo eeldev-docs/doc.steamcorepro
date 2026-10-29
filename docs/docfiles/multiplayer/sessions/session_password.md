@@ -20,8 +20,6 @@ The **Create SteamCorePRO Session** node now supports password protection for se
    - When calling the **Create SteamCorePRO Session** node, provide a password (e.g., via a UI input field).
    - The password is hashed and stored securely in the session settings.
 
-   ![Creating Passworded Session Example](../../../../static/img/password_session_1.png)
-
 ## Joining the Session
 Use the **Join SteamCorePRO Session** node to connect to a password-protected session.
 
@@ -33,7 +31,12 @@ Use the **Join SteamCorePRO Session** node to connect to a password-protected se
    - If the password is incorrect or missing, the **Join Fail Reason** output provides an error message (e.g., "Incorrect Password" or "Password Required").
    - Use this to display feedback to the player, such as an error notification.
 
-   ![Joining Passworded Session Example](../../../../static/img/password_session_2.png)
+## Example
+`Password` is a **String** variable, for example from a text box, and `SelectedSession` is the **Steam Session Result** the player picked in your server list:
+- **CreatePasswordSession** creates a session with the password and opens the map as a listen server.
+- **JoinPasswordSession** joins `SelectedSession` with the password and prints **Join Fail Reason** if it fails.
+
+![Passworded session example](../../../../static/img/session_password_example.png)
 
 ## Notes
 - **Security**: Passwords are hashed by the **Create SteamCorePRO Session** node, ensuring they are not stored as plain text. Avoid custom encryption for additional security unless necessary.

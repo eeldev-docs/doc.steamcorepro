@@ -66,5 +66,15 @@ When a friend clicks **Join Game** in Steam and your game is already running, **
 When you use SteamCore PRO sessions with **Allow Join via Presence** enabled, the plugin sets the `connect` key for you. Do not overwrite it with **Set Rich Presence**, or friends cannot join through Steam. See [Inviting Friends](../multiplayer/friends/inviting_friends.md).
 :::
 
+## Example
+This Blueprint uses the localization tokens from Step 1. `MapName` is a **String** variable and `Friend` is a **Steam ID** variable:
+- **BeginPlay** binds **Friend Rich Presence Update** and **Game Rich Presence Join Requested**, and requests the friend's Rich Presence.
+- **OnFriendRichPresence** prints the friend's name and their `status` key when it changes.
+- **OnRichPresenceJoin** prints the **Connect** string when a friend joins through Steam.
+- **ShowPlaying** sets `map` and `steam_display`, so friends see "Playing Dust".
+- **ShowInMenu** clears all keys and shows "In the main menu".
+
+![Rich Presence example](../../../static/img/rich_presence_example.png)
+
 ## Testing
 Use Valve's [Rich Presence tester](https://steamcommunity.com/dev/testrichpresence) while the game is running to see the keys that are set for your account.

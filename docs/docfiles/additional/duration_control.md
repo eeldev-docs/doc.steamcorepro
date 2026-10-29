@@ -26,3 +26,10 @@ Offline play does not count against the limits. Call **Set Duration Control Onli
 | **Offline** | Single-player or offline co-op. |
 | **Online** | Online play. |
 | **Online High Pri** | Online play that shouldn't be interrupted, for example a ranked match. |
+
+## Example
+- **BeginPlay** binds **Duration Control Updated** and calls the async **Get Duration Control**. When duration control applies, it prints the seconds left.
+- **OnDurationControlUpdated** switches on **Progress** and asks the player to save when Steam will close the game soon.
+- **StartOfflineMatch** sets the online state to **Offline** before an offline match.
+
+![Duration control example](../../../static/img/duration_control_example.png)

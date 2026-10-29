@@ -44,7 +44,7 @@ The **ServerTravel** node simplifies map switching by allowing you to specify th
   2. Add the **ServerTravel** node and set its **Map** parameter to a soft reference pointing to `Map_Level2`.
   3. Execute the node when the match ends to initiate the map switch.
 
-![Image](../../../../static/img/server_travel.png)
+![Server Travel example](../../../../static/img/server_travel_example.png)
 
 ## Benefits of Using ServerTravel
 - **Error Reduction**: Soft references validate map assets at runtime, preventing crashes due to missing or misspelled map names.

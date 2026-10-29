@@ -28,7 +28,9 @@ Once you have identified a session to join (e.g., from the **Find SteamCore Sess
    - Pass the session information (e.g., session ID or details from the search results) to the node.
    - The Steam OSS will handle the connection to the target session automatically.
 
-   ![Join Session Example](../../../../static/img/join_session.png)
+   The example below finds sessions and, if there are any, joins the first one with **Join SteamCore PRO Session**. If joining fails, it prints **Join Fail Reason**.
+
+   ![Join Session Example](../../../../static/img/join_session_example.png)
 
 ### Example Workflow
 - After calling **Find SteamCore Sessions**, iterate through the returned session list.

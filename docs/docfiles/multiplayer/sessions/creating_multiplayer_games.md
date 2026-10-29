@@ -35,7 +35,9 @@ To set up a basic multiplayer session, follow these steps:
 - Set the level name (e.g., `YourMultiplayerMap`) and the parameter `listen` in options.
 - Execute the flow to start the session and listen for connections.
 
-![Create SteamCore Session Example](../../../../static/img/create_session.png)
+The example below creates a session with the setting `UsingSteamCore` = 1, which [Finding Sessions](./finding_multiplayer_games.md) filters on. On success it opens `ThirdPersonExampleMap` with the option `listen`; on failure it prints a message.
+
+![Create SteamCore Session Example](../../../../static/img/create_session_example.png)
 
 
 

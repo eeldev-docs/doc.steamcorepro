@@ -97,18 +97,17 @@ Create a JSON schema for your items, specifying details like `itemdefid`, `type`
 ![Item Definition Example](../../../static/img/legacy/2020-02-3_itemDef.png)
 
 ## Initiating a Transaction
-To start a purchase, use the **Initiate Purchase** node to trigger a transaction for specific items. For example, the following Blueprint initiates a purchase for a "Rifle" (ItemDefID: 10) and a "Bat" (ItemDefID: 100).
+To start a purchase, use the **Init Txn** node to create a transaction for specific items. The [example](#example) at the bottom of this page starts a purchase of a "Rifle" (ItemDefID: 10) and a "Bat" (ItemDefID: 100).
 
 :::note
-The screenshot below uses the item definitions from the Example Project (shown in the table at the bottom of the screenshot), not the JSON schema above. Use the `itemdefid` values from **your own** schema, and only items that have a `price` set can be purchased (for example, the `playtimegenerator` item in the schema above cannot be bought).
+The example uses the item definitions from the Example Project, not the JSON schema above. Use the `itemdefid` values from **your own** schema, and only items that have a `price` set can be purchased (for example, the `playtimegenerator` item in the schema above cannot be bought).
 :::
 
-![Initiate Purchase Node](../../../static/img/legacy/2020-02-4_initiate.png)
-
 ### Steps
-1. Add the **Initiate Purchase** node to your game logic (e.g., in a UI Blueprint triggered by a "Buy" button).
-2. Specify the `ItemDefID` for each item the player wants to purchase.
-3. Execute the node to display the Steam Overlay with the transaction details.
+1. Add the **Init Txn** node to your game logic (e.g., in a UI Blueprint triggered by a "Buy" button).
+2. Pass a new order ID from **Make Transaction ID**, the player's Steam ID from **Get SteamId as String**, and your key and App ID from **Get Project Key** and **Get Project App ID**.
+3. For each item, add its `ItemDefID`, quantity, amount (in cents) and description to the arrays, in the same order.
+4. When the node calls back, look for `errordesc` in **Data** with **Find Json String**. If it is not there, Steam shows the purchase to the player in the Steam Overlay.
 
 ### Demo Video
 Watch a short demo of purchasing a "Bat" item. For a complete example, download the Example Project from [eelDev](https://eeldev.com).
@@ -118,15 +117,21 @@ import ReactPlayer from 'react-player'
 <ReactPlayer url='/img/legacy/2020-02-19076f72082d7b1de554fc1f665a2144.mp4' controls={true}/>
 
 ## Finalizing a Transaction
-After the player confirms the purchase via the Steam Overlay, finalize the transaction to complete the process and grant the items to the player. You can use the **Finalize Purchase** node provided by **SteamCore::Web** or implement custom logic.
-
-![Finalize Purchase Node](../../../static/img/legacy/2020-02-web_microtransaction_2-3.png)
+After the player confirms the purchase via the Steam Overlay, finalize the transaction to complete the process and grant the items to the player. Use the **Finalize Txn** node provided by **SteamCore::Web**, or implement custom logic.
 
 ### Steps
-1. Listen for the **MicroTxnAuthorizationResponse** event to detect when the player authorizes or denies the transaction.
-2. If authorized, add the **Finalize Purchase** node and pass the `OrderID` from the authorization event.
+1. Use **Get Steam User** and bind **Micro Txn Authorization Response** to detect when the player authorizes or denies the transaction.
+2. If **Authorized** is true, call **Finalize Txn** with the **Order ID** and **App ID** from the event.
 3. Grant the purchased items to the player (e.g., update inventory or unlock content).
 4. Handle denial cases by informing the player (e.g., via a UI message).
+
+## Example
+This Blueprint uses nodes from both SteamCore PRO and **SteamCore::Web**:
+- **BeginPlay** binds **Micro Txn Authorization Response**.
+- **BuyItems** starts a purchase of a Rifle and a Bat with **Init Txn**, and prints `errordesc` if Steam returns an error.
+- **OnMicroTxnAuthorization** finalizes the purchase with **Finalize Txn** if the player authorized it and prints the `result`. If not, it prints that the player cancelled.
+
+![Microtransactions example](../../../static/img/microtransactions_example.png)
 
 ## Notes
 - **Sandbox Mode**: Always enable Sandbox Mode during testing to avoid real charges. Disable it for production.

@@ -48,5 +48,14 @@ Sessions time out after a few minutes without traffic. To end one right away, ca
 
 If a session can't be established or breaks, the **Session Failed** delegate is broadcast with the same information.
 
+## Example
+A simple chat between two players. `Friend` is a **Steam ID** variable, for example a lobby member, and `ChatText` is a **String** variable:
+- **BeginPlay** binds **Session Request** and starts a looping timer that calls **ReceiveChat** ten times a second.
+- **SendChat** turns `ChatText` into bytes with **String to Bytes** and sends it on channel 0.
+- **OnSessionRequest** accepts the session only if it comes from `Friend`.
+- **ReceiveChat** reads up to 10 messages on channel 0 and prints each sender's name and text, using **Bytes to String**.
+
+![Networking Messages example](../../../static/img/networking_messages_example.png)
+
 ## Dedicated Servers
 On a dedicated server, the nodes use the game server's own Steam identity automatically.

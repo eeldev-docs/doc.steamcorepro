@@ -21,7 +21,9 @@ To locate multiplayer sessions, use the following approach:
    - In your game logic (e.g., Game Instance or Menu Blueprint), add the **Find SteamCore Sessions** node.
    - This node queries Steam servers for available sessions and returns a list of sessions that can be joined.
 
-   ![Find SteamCore Sessions Example](../../../../static/img/find_sessions.png)
+   The example below finds sessions with `UsingSteamCore` = 1 (see [Search Filtering Options](#search-filtering-options)), saves them in the `FoundSessions` array for a server list, and prints the name of each one.
+
+   ![Find SteamCore Sessions Example](../../../../static/img/find_sessions_example.png)
 
 2. **Create a Server List UI**:
    - Populate a list of widgets with the found sessions to allow players to select a server to join.
@@ -42,11 +44,9 @@ You can refine the session search results using **Search Settings** to filter ou
    - Set filters such as boolean flags, session names, or other metadata defined by your game.
 
 2. **Example Filter**:
-   - The example below filters sessions to only include those with the `"UsingSteamCore"` boolean set to `true`.
-
-   ![Search Settings Filter Example](../../../../static/img/find_sessions_filter.png)
+   - The example in [Finding Sessions](#finding-sessions) only finds sessions with the setting `UsingSteamCore` equal to 1, as set by the example in [Creating Sessions](./creating_multiplayer_games.md).
 
 ### Steps
-- Create a **Search Settings** variable and set the `UsingSteamCore` key to `true`.
-- Pass this structure to the **Find SteamCore Sessions** node before executing the search.
+- Add a **Make Map** node with the key `UsingSteamCore`, and a **Make Search Integer** node with **Equals** and `1` as its value.
+- Connect the map to **Search Settings** on the **Find SteamCore Sessions** node.
 - Verify that the returned session list matches your filter criteria.

@@ -27,4 +27,12 @@ Steam downloads avatars in the background. If the avatar is not available yet, t
 ## Players Who Are Not Your Friends
 Steam only knows about your friends and players you share a lobby, game server or leaderboard with. For other players, call **Request User Information** first. When Steam has the information, the avatar nodes work as described above.
 
+## Example
+`Friend` is a **Steam ID** variable and `Avatar` is a **Texture 2D** variable that an Image widget can use:
+- **BeginPlay** binds **Avatar Image Loaded**.
+- **ShowFriendAvatar** gets the medium avatar. If it is not valid yet, it calls **Request User Information** so Steam loads it.
+- **OnAvatarLoaded** sets `Avatar` when the loaded avatar belongs to `Friend`.
+
+![Friend avatar example](../../../../static/img/friend_avatars_example.png)
+
 See also [Friend List](./friends_list.md).
