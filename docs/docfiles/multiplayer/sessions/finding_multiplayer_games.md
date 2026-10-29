@@ -44,7 +44,7 @@ You can refine the session search results using **Search Settings** to filter ou
    - Set filters such as boolean flags, session names, or other metadata defined by your game.
 
 2. **Example Filter**:
-   - The example in [Finding Sessions](#finding-sessions) only finds sessions with the setting `UsingSteamCore` equal to 1, as set by the example in [Creating Sessions](./creating_multiplayer_games.md).
+   - The example at the top of this page only finds sessions with the setting `UsingSteamCore` equal to 1, as set by the example in [Creating Sessions](./creating_multiplayer_games.md).
 
 ### Steps
 - Add a **Make Map** node with the key `UsingSteamCore`, and a **Make Search Integer** node with **Equals** and `1` as its value.
