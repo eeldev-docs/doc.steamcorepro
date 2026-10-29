@@ -51,7 +51,7 @@ Game phases group a stretch of play, such as one match or one level, so the play
 2. Optionally call **Set Game Phase ID**, **Add Game Phase Tag** and **Set Game Phase Attribute** to describe it, for example the map and the result.
 3. Call **End Game Phase** when the match ends.
 
-**Open Overlay to Game Phase** and **Open Overlay to Timeline Event** open the Steam overlay at a phase or an event, for example from a match history screen.
+**Open Overlay to Game Phase** and **Open Overlay to Timeline Event** open the Steam overlay at a phase or an event, for example from a match history screen. See [Steam Overlay](./steam_overlay.md) for more about the overlay.
 
 ## Checking for Recordings
 Before you offer to open the overlay, you can check whether Steam has any recording for an event or a phase:

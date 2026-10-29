@@ -39,7 +39,7 @@ The **Timeout** input of **Submit Item Update** defaults to 10 seconds. Uploads 
 :::
 
 ### Workshop Legal Agreement
-If **Data → bUserNeedsToAcceptWorkshopLegalAgreement** is true, the item stays hidden until the player accepts the Workshop agreement. Open it with **Activate Game Overlay to Web Page**:
+If **Data → bUserNeedsToAcceptWorkshopLegalAgreement** is true, the item stays hidden until the player accepts the Workshop agreement. Open it with **Activate Game Overlay to Web Page** (see [Steam Overlay](./steam_overlay.md)):
 
 ```
 https://steamcommunity.com/sharedfiles/workshoplegalagreement

@@ -69,3 +69,10 @@ The easiest option is the **Steam Editable Text Box** widget, found in the **Ste
 | **Close Steam Keyboard on Focus Lost** | Close the keyboard when the text box loses focus. Enabled by default. |
 
 The keyboard layout follows the text box's **Keyboard Type**: **Number** shows a numeric keyboard and **Email** shows an email keyboard. Read-only text boxes don't open the keyboard.
+
+## Big Picture Mode
+**Is Steam in Big Picture Mode** on **Get Steam Utils** returns true when Steam and its overlay run in Big Picture mode, for example on a TV or on a Steam Deck. Use it to start with a UI made for a gamepad, with bigger text and no mouse cursor.
+
+The example sets the **Boolean** variable `bGamepadUI` at start, for your menus to read:
+
+![Big Picture example](../../../static/img/steam_hardware/big_picture_example.png)
