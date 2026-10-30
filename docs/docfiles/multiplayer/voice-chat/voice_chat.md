@@ -63,5 +63,37 @@ bRequiresPushToTalk=true
 
 ![Image](../../../../static/img/voip_controller.png)
 
+## Voice Volume
+
+### Volume of Other Players
+Voice playback uses the **VOIP Sound Class** from the project settings.
+
+1. Create a **Sound Class**, for example `SC_Voice`, and set its **Volume**, for example to `2.0`.
+2. Select it in **Project Settings → Engine → Audio → VOIP Sound Class**.
+
+To change the volume at runtime, for example from a volume slider in your settings menu, create a **Sound Mix**. Call **Set Sound Mix Class Override** with the Sound Mix, `SC_Voice` and the new **Volume**, then call **Push Sound Mix Modifier** with the Sound Mix.
+
+In the example below, `VoiceSoundMix` and `VoiceSoundClass` are variables set to your Sound Mix and `SC_Voice`. **Fade In Time** is `0` so the new volume applies at once.
+
+![Image](../../../../static/img/voip_volume_players.png)
+
+### Microphone Volume
+The console variable `voice.MicInputGain` controls how loud the local player's microphone is for other players. The default is `1.0`. It applies to Windows.
+
+```
+[SystemSettings]
+voice.MicInputGain=2.0
+```
+
+You can also set it at runtime with **Execute Console Command**, for example `voice.MicInputGain 2.0`.
+
+![Image](../../../../static/img/voip_mic_gain.png)
+
+If quiet speech is cut off, lower `voice.MicNoiseGateThreshold`. Speech below this threshold is not sent.
+
+:::note
+High values on either setting can cause distortion. Increase them in small steps.
+:::
+
 ## Testing Voice
 - [Testing Steam Functionality](../../getting_started/testing_steam_functionality.md)
