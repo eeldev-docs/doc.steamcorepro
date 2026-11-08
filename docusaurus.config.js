@@ -10,7 +10,11 @@ const config = {
   url: 'https://steamcore-pro.eeldev.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
   favicon: 'img/eeldev_icon.png',
   organizationName: 'eeldev-docs', // Usually your GitHub org/user name.
   projectName: 'doc.steamcorepro', // Usually your repo name.
