@@ -38,5 +38,6 @@ You can find an example of this in the [Blueprint Example Project](../../../exam
 ### Final Notes
 - The input device will be used and selected when joining or creating a multiplayer session
 - If you're currently in a session you will have to restart the game for the changes to take effect
+- To show how loud the selected microphone is, for example in a settings menu, see [Microphone Level Meter](./microphone_level_meter.md)
 
 ![Image](../../../../static/img/voice_5.png)

@@ -20,7 +20,7 @@ This guide explains how to unlock achievements and update stats with the **Steam
 3. **Publish** the changes. Unpublished changes are not visible to the game.
 
 ## Step 2: Stats Are Loaded Automatically
-With Steamworks SDK 1.61 and later, Steam loads the current user's stats and achievements when the game starts. You do **not** need to call **Request Current Stats**, which is deprecated.
+With Steamworks SDK 1.61 and later, Steam loads the current user's stats and achievements when the game starts. You do **not** need to call **Request Current Stats**. The node was removed in SteamCore PRO 1.1.13, so delete it from any Blueprint that still uses it.
 
 ## Unlocking an Achievement
 1. Call **Set Achievement** with the achievement's API name.

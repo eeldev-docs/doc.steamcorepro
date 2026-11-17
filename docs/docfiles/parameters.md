@@ -20,5 +20,8 @@ These parameters are passed on the command line when starting your game or serve
 ### -force_steamclient_link
 - Windows dedicated servers only: forces loading of the Steam client libraries (`steamclient64.dll`, `tier0_s64.dll`, `vstdlib_s64.dll`) at startup
 
+### -nosteamcore
+- Disables the SteamCore online subsystem and Steam initialization, also when `bInitSteamWithoutOnlineSubsystem` is enabled
+
 ### -NoPacketHandler
 - Non-Shipping builds only: disables packet handlers on the SteamCoreSockets NetDriver, which also disables the [SteamCore Auth Module](additional/authenticating_steam_users.md). Only use this for debugging.

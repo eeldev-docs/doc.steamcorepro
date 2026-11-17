@@ -78,14 +78,16 @@ In the example below, `VoiceSoundMix` and `VoiceSoundClass` are variables set to
 ![Image](../../../../static/img/voip_volume_players.png)
 
 ### Microphone Volume
-The console variable `voice.MicInputGain` controls how loud the local player's microphone is for other players. The default is `1.0`. It applies to Windows.
+Call **Set Microphone Input Gain** to change how loud the local player's microphone is for other players, for example from a volume slider in your settings menu. The default is `1.0`. It applies to Windows. Values below `0` are set to `0`. Requires SteamCore PRO 1.2.0 or newer.
+
+**Get Microphone Input Gain** returns the current value, for example to set the start position of the slider.
+
+The value is saved in **GameUserSettings.ini** and restored when the game starts. To set a default for players who haven't changed it, set it in your **DefaultEngine.ini**:
 
 ```
 [SystemSettings]
 voice.MicInputGain=2.0
 ```
-
-You can also set it at runtime with **Execute Console Command**, for example `voice.MicInputGain 2.0`.
 
 ![Image](../../../../static/img/voip_mic_gain.png)
 

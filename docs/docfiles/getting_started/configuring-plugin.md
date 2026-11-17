@@ -68,8 +68,16 @@ Below is a reference for all configurable options in the `[OnlineSubsystemSteamC
 ```ini
 [OnlineSubsystemSteamCore]
 
-// Enable or disable the SteamCore plugin
+// Enable or disable the SteamCore online subsystem
 bEnabled=True
+
+// Initialize Steam even when the online subsystem is disabled (bEnabled=False).
+// The Blueprint API and SteamCoreSockets then work without the online subsystem. (Requires SteamCore PRO 1.3.0 and later)
+bInitSteamWithoutOnlineSubsystem=False
+
+// Run Steam callbacks on the game thread (default: True).
+// Set to False to run them on the online subsystem thread as in earlier versions. (Requires SteamCore PRO 1.3.0 and later)
+bRunCallbacksOnGameThread=True
 
 // Your app's Steam ID.
 // SteamDevAppId is used in Development/Debug builds (and written to steam_appid.txt),
@@ -128,6 +136,24 @@ bOverrideCurrentHandshakeVersion=True
 CurrentHandshakeVersion=0
 ```
 
+## Using SteamCore Without the Online Subsystem
+
+From SteamCore PRO 1.3.0 the Blueprint API and SteamCoreSockets can run without the SteamCore online subsystem, for example when another plugin provides the online subsystem.
+
+```ini
+[OnlineSubsystemSteamCore]
+bEnabled=False
+bInitSteamWithoutOnlineSubsystem=True
+SteamDevAppId=480
+SteamAppId=480
+```
+
+- Steam is initialized at startup and Steam callbacks keep working.
+- Async Blueprint nodes keep working.
+- Clients and listen servers can use the `SteamCoreSocketsNetDriver` for Steam P2P.
+- Sessions, friends, voice, achievements and leaderboards through the online subsystem are not available.
+- Dedicated servers still need the online subsystem (`bEnabled=True`) for the Steam game server login.
+
 :::note Server Port
 The game/listen port is **not** configured in the `[OnlineSubsystemSteamCore]` section. It is read from the engine's `[URL]` section (default `7777`) or from the `-Port=` [launch parameter](../parameters.md):
 
@@ -149,7 +175,6 @@ bOverrideCurrentHandshakeVersion=False
 ```
 :::
 
-:::warning ⚠️ Project Settings Deprecated
-Support for editing these settings via Project Settings has been removed in recent plugin versions. You must now configure everything through DefaultEngine.ini.
+:::info Project Settings
+From SteamCore PRO 1.3.0 the most common settings can also be edited in **Project Settings > Game > SteamCore**. The page reads and writes the same keys in the `[OnlineSubsystemSteamCore]` section of DefaultEngine.ini, so both ways of configuring the plugin stay in sync.
 :::
-![Image](../../../static/img/project_settings_2.png)
