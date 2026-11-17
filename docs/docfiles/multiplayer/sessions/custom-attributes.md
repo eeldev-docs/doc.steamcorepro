@@ -11,6 +11,11 @@ Connect a **Make Map** node to **Session Settings** on **Create SteamCore PRO Se
 ## Reading Attributes
 Each search result has a **Session Settings** array. Loop through it and call **Get String** or **Get Integer** on each setting. They return `true` when the setting has that type, and output its **Key** and value.
 
+## Typed Attributes
+**Make Session Setting (Typed)** and **Get Session Setting (Typed)** replace the separate String and Integer nodes. Connect a value of any supported type to **Value**, and the node picks the right function. Integers, booleans and enums are stored as integers, and everything else as strings. The example below stores an enum and reads it back as an integer.
+
+![Typed session settings](../../../../static/img/typed_session_settings.png)
+
 ## Updating Attributes
 The host can change the attributes with **Update SteamCore PRO Session**, using a **Make Map** in the same way.
 

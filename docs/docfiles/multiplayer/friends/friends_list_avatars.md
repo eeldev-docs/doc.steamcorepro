@@ -1,3 +1,6 @@
+---
+sidebar_position: 1
+---
 # Friend Avatars
 
 :::info Video Tutorial is available

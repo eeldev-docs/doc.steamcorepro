@@ -1,3 +1,6 @@
+---
+sidebar_position: 2
+---
 # Authenticating Steam Users 
 
 :::tip SteamCore PRO 1.0.3.1 and newer

@@ -1,3 +1,6 @@
+---
+sidebar_position: 5
+---
 # Lobby to Game Session
 In this example we’re going to take a look how to transition from a Lobby to a Game Session using only Blueprints and SteamCore.
 

@@ -3,7 +3,7 @@ id: microtransactions
 title: Microtransactions
 description: Learn how to implement microtransactions in your Unreal Engine game using the SteamCore::Web plugin.
 slug: /docfiles/microtransactions
-sidebar_position: 8
+sidebar_position: 1
 ---
 
 # Microtransactions

@@ -34,6 +34,10 @@ Steam shows the unlock notification when **Store Stats** succeeds. Both nodes re
 
 Use **Get Stat Int** or **Get Stat Float** to read the current value, for example to increment it.
 
+**Get Stat** and **Set Stat** are single nodes that work with both types. Connect an Integer or Float to **Value**, and the node uses the matching Int or Float function. The example below adds one to the `Kills` stat.
+
+![Update a stat](../../../static/img/typed_stats.png)
+
 :::tip Batch your updates
 **Store Stats** sends everything that changed since the last call. Set several stats and achievements first, then call **Store Stats** once, for example at the end of a match.
 :::

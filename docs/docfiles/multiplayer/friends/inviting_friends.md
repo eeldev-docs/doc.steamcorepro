@@ -1,3 +1,6 @@
+---
+sidebar_position: 3
+---
 # Inviting Friends to Your Game
 
 This guide explains how to implement friend invitation functionality using **SteamCore PRO** (version **1.0.2.4** or later). For detailed API reference, see the [Steamworks Friends Documentation](https://partner.steamgames.com/doc/api/ISteamFriends#functions).

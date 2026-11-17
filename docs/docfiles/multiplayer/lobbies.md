@@ -1,3 +1,6 @@
+---
+sidebar_position: 4
+---
 # Lobbies
 
 This guide explains how to create, find and join Steam lobbies with the **SteamCore|Matchmaking** nodes. A lobby is a group of players that can share data and chat before a game starts. To move the players from a lobby into a game, see [Lobby to Game Session](lobby_to_game_session.md).
@@ -20,6 +23,10 @@ Call **Create Lobby** with a **Lobby Type** and **Max Members**. When **On Callb
 The owner can attach key/value strings to the lobby with **Set Lobby Data**, for example the game mode or map. Every player can read them with **Get Lobby Data**. The data is used both to show information about a lobby and to filter the search.
 
 Each member can also set their own data with **Set Lobby Member Data**, for example a selected character. Read it with **Get Lobby Member Data**.
+
+**Set Lobby Data (Typed)**, **Get Lobby Data (Typed)** and the matching member data nodes convert the value for you. Connect any Integer, Integer64, Float, Boolean, Byte, Enum, Name or String to **Value**, and the node stores it as text and converts it back when you read it. This lets you save an enum, such as the lobby mode, without converting it yourself.
+
+![Typed lobby data](../../../static/img/typed_lobby_data.png)
 
 ## Finding Lobbies
 1. Add filters with the **Add Request Lobby List ...** nodes, for example **Add Request Lobby List String Filter** to match a lobby data key.
@@ -46,6 +53,10 @@ Use **Get Steam Matchmaking** and bind the events you need:
 | **Lobby Chat Msg** | A chat message was sent in the lobby. |
 | **Lobby Invite** | A friend invited you to a lobby. |
 | **Lobby Game Created** | The owner set the game server with **Set Lobby Game Server**. |
+
+You can also use the **Bind Steam Callback** nodes, found under **SteamCore|Callbacks**. Add the node for the event you need, for example **Bind Steam Callback: Lobby Data Update**, and call it once, for example from a custom event. **On Callback** then fires every time Steam sends the event, and the event's values are on the node's output pins. Add it in an Event Graph.
+
+![Bind Steam Callback](../../../static/img/bind_callback_lobby_data.png)
 
 ## Example
 This Blueprint uses a variable **Lobby** of type **Steam ID**:

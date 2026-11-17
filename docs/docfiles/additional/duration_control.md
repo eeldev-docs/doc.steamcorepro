@@ -1,3 +1,6 @@
+---
+sidebar_position: 4
+---
 # Duration Control (China)
 
 Games sold in mainland China must limit the playtime of minors. Steam tracks the playtime and tells the game when the player should stop. The nodes are called on **Get Steam User** and are in the **SteamCore|User** category.

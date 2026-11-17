@@ -1,3 +1,6 @@
+---
+sidebar_position: 2
+---
 # Friend List
 - Requires SteamCore PRO **1.0.2.4** and later
 - You can find more examples in the [Blueprint Example Project](../../../example-project.md)

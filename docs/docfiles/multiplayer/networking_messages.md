@@ -1,3 +1,6 @@
+---
+sidebar_position: 7
+---
 # P2P Messages
 
 Steam Networking Messages sends data directly between players, without an Unreal Engine network connection. Use it for things outside regular replication, for example chat, invites or small game data between players in a lobby. Steam handles NAT traversal and relays the traffic when a direct connection isn't possible.

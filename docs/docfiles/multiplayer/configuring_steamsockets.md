@@ -1,3 +1,6 @@
+---
+sidebar_position: 1
+---
 # Configuring SteamCoreSockets
 
 :::info Video Tutorial is available

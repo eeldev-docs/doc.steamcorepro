@@ -1,3 +1,6 @@
+---
+sidebar_position: 1
+---
 # Additional Logging
 If you want more logging output in your SteamCore project, you can add the following lines to your **DefaultEngine.ini** configuration file
 
