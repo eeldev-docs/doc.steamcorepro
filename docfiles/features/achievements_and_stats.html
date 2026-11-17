@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.10.2">
 <title data-rh="true">Achievements and Stats | SteamCore PRO Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://steamcore-pro.eeldev.com/docfiles/features/achievements_and_stats"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Achievements and Stats | SteamCore PRO Documentation"><meta data-rh="true" name="description" content="Video Tutorial"><meta data-rh="true" property="og:description" content="Video Tutorial"><link data-rh="true" rel="icon" href="/img/eeldev_icon.png"><link data-rh="true" rel="canonical" href="https://steamcore-pro.eeldev.com/docfiles/features/achievements_and_stats"><link data-rh="true" rel="alternate" href="https://steamcore-pro.eeldev.com/docfiles/features/achievements_and_stats" hreflang="en"><link data-rh="true" rel="alternate" href="https://steamcore-pro.eeldev.com/docfiles/features/achievements_and_stats" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Achievements and Stats","item":"https://steamcore-pro.eeldev.com/docfiles/features/achievements_and_stats"}]}</script><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"><link rel="stylesheet" href="/assets/css/styles.a6e37564.css">
-<script src="/assets/js/runtime~main.6351ecba.js" defer="defer"></script>
-<script src="/assets/js/main.f24d8feb.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.a3e6df81.js" defer="defer"></script>
+<script src="/assets/js/main.b021c882.js" defer="defer"></script>
 </head>
 <body>
 <svg style="display: none;"><defs>
@@ -43,7 +43,7 @@
 <li class=""><strong>Publish</strong> the changes. Unpublished changes are not visible to the game.</li>
 </ol>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-2-stats-are-loaded-automatically">Step 2: Stats Are Loaded Automatically<a href="#step-2-stats-are-loaded-automatically" class="hash-link" aria-label="Direct link to Step 2: Stats Are Loaded Automatically" title="Direct link to Step 2: Stats Are Loaded Automatically" translate="no">​</a></h2>
-<p>With Steamworks SDK 1.61 and later, Steam loads the current user&#x27;s stats and achievements when the game starts. You do <strong>not</strong> need to call <strong>Request Current Stats</strong>, which is deprecated.</p>
+<p>With Steamworks SDK 1.61 and later, Steam loads the current user&#x27;s stats and achievements when the game starts. You do <strong>not</strong> need to call <strong>Request Current Stats</strong>. The node was removed in SteamCore PRO 1.1.13, so delete it from any Blueprint that still uses it.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="unlocking-an-achievement">Unlocking an Achievement<a href="#unlocking-an-achievement" class="hash-link" aria-label="Direct link to Unlocking an Achievement" title="Direct link to Unlocking an Achievement" translate="no">​</a></h2>
 <ol>
 <li class="">Call <strong>Set Achievement</strong> with the achievement&#x27;s API name.</li>
