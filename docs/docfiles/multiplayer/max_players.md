@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 8
 id: configuring-maxplayers
 title: Max Players for Game Sessions
 description: Learn how to configure the maximum number of players for your Unreal Engine game session using the GameSession settings.
