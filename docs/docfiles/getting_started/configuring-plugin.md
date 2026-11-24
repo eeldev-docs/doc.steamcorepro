@@ -10,6 +10,18 @@ Watch the [Getting Started Video Tutorial](../videos/getting_started.mdx) for a 
 
 ---
 
+## Project Settings
+
+In SteamCore PRO 1.3.0 and later, open **Edit → Project Settings → Game → SteamCore** to configure the plugin in Unreal Editor. The Steam, Networking, and Game Server fields shown below edit the corresponding `[OnlineSubsystemSteamCore]` settings in `Config/DefaultEngine.ini`.
+
+![SteamCore Project Settings showing the Setup, Steam, Networking, and Game Server sections](../../../static/img/steamcore-project-settings.png)
+
+Start in **Setup**. It shows whether the Steam client is running, which plugin and Steamworks SDK versions are in use, and where the Steamworks libraries are loaded from. It also flags configuration problems, such as the Spacewar App ID shown above.
+
+- **Apply Recommended Settings** writes the recommended configuration to `DefaultEngine.ini` and keeps any App IDs you have already set. Review **Steam Dev App Id** and **Steam App Id** and use your own App ID before release.
+- **Refresh** reruns the setup checks after you change settings.
+- **Import Achievements and Stats** uses your Steam Web API key to import the app's definitions into `DT_SteamAchievements` and `DT_SteamStats` under `/Game/SteamCore`. The key is saved in your per-user editor settings. See [Achievements and Stats](../features/achievements_and_stats.md).
+
 ## Step 1: Configure `DefaultEngine.ini`
 
 Edit your project's `DefaultEngine.ini` located at:
@@ -173,8 +185,4 @@ If you want to keep Unreal Engine's default handshake versions, explicitly disab
 bOverrideMinHandshakeVersion=False
 bOverrideCurrentHandshakeVersion=False
 ```
-:::
-
-:::info Project Settings
-From SteamCore PRO 1.3.0 the most common settings can also be edited in **Project Settings > Game > SteamCore**. The page reads and writes the same keys in the `[OnlineSubsystemSteamCore]` section of DefaultEngine.ini, so both ways of configuring the plugin stay in sync.
 :::
