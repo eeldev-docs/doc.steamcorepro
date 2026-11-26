@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>SteamCore PRO Changelog</title>
+        <link>https://steamcore-pro.eeldev.com/changelog</link>
+        <description>Release notes for SteamCore PRO</description>
+        <lastBuildDate>Tue, 24 Nov 2026 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[SteamCore PRO 1.3.0]]></title>
+            <link>https://steamcore-pro.eeldev.com/changelog/1-3-0</link>
+            <guid>https://steamcore-pro.eeldev.com/changelog/1-3-0</guid>
+            <pubDate>Tue, 24 Nov 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Steam initialization without the online subsystem, a new project setup panel, and new Blueprint nodes.]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="SteamCore PRO 1.3.0 release screenshot" src="https://steamcore-pro.eeldev.com/assets/images/release-overview-38cc163b89688a4f17df71855dea6714.png" width="1024" height="662" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="steam-without-the-online-subsystem">Steam without the online subsystem<a href="https://steamcore-pro.eeldev.com/changelog/1-3-0#steam-without-the-online-subsystem" class="hash-link" aria-label="Direct link to Steam without the online subsystem" title="Direct link to Steam without the online subsystem" translate="no">​</a></h2>
+<ul>
+<li class="">The <code>SteamCoreShared</code> module now initializes Steam, so the SteamCore online subsystem is optional for clients.</li>
+<li class="">Use <strong>Initialize Steam Without Online Subsystem</strong> (<code>bInitSteamWithoutOnlineSubsystem</code>) to enable this mode.</li>
+<li class="">Dedicated servers still use the online subsystem to log on to Steam.</li>
+<li class="">Pass <code>-nosteamcore</code> to skip Steam initialization.</li>
+<li class="">The Steam overlay also works in this mode.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="project-settings">Project settings<a href="https://steamcore-pro.eeldev.com/changelog/1-3-0#project-settings" class="hash-link" aria-label="Direct link to Project settings" title="Direct link to Project settings" translate="no">​</a></h2>
+<ul>
+<li class="">SteamCore settings are back under <strong>Project Settings &gt; Game &gt; SteamCore</strong>.</li>
+<li class="">A new <strong>Setup</strong> section shows the client status, plugin and Steamworks SDK versions, and the path the Steamworks libraries load from. It also links to the docs and the app’s Steamworks page.</li>
+<li class="">The setup checks have <strong>Fix</strong> buttons for Steam initialization and for setting <code>DefaultPlatformService</code> to <code>SteamCore</code>.</li>
+<li class=""><strong>Apply Recommended Settings</strong> preserves existing App IDs when writing the recommended configuration.</li>
+<li class="">The level editor toolbar now has a <strong>SteamCore</strong> button.</li>
+<li class=""><strong>Import Achievements</strong> and <strong>Import Stats</strong> download Steamworks definitions into <code>DT_SteamAchievements</code> and <code>DT_SteamStats</code> under <code>/Game/SteamCore</code>.</li>
+<li class="">In non-shipping builds, run <code>showdebug steamcore</code> to display Steam status on screen.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="blueprint-nodes">Blueprint nodes<a href="https://steamcore-pro.eeldev.com/changelog/1-3-0#blueprint-nodes" class="hash-link" aria-label="Direct link to Blueprint nodes" title="Direct link to Blueprint nodes" translate="no">​</a></h2>
+<ul>
+<li class="">Added <strong>Get Stat</strong>, <strong>Set Stat</strong>, and <strong>Get User Stat</strong>.</li>
+<li class="">Added typed nodes for getting and setting lobby and lobby member data, as well as <strong>Make Session Setting</strong> and <strong>Get Session Setting</strong>.</li>
+<li class="">Added <strong>Bind Steam Callback</strong> nodes.</li>
+<li class="">After an import, the name pins on User Stats nodes offer the imported names in a dropdown.</li>
+<li class=""><strong>Game Server Item</strong> now exposes <strong>Had Successful Response</strong>. Server browsers can use it to hide or flag servers that did not answer the details query.</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Typed stats Blueprint nodes" src="https://steamcore-pro.eeldev.com/assets/images/typed-stats-26b299f909ef157ebb4e82bac19933b9.png" width="1600" height="664" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="SteamCore PRO Blueprint examples" src="https://steamcore-pro.eeldev.com/assets/images/blueprint-examples-acdd2e58a46dccb1c00dbc45258b9f80.png" width="1024" height="405" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Additional SteamCore PRO Blueprint examples" src="https://steamcore-pro.eeldev.com/assets/images/additional-blueprint-examples-fb781996fb1c693e0f950575b818f8a3.png" width="816" height="518" class="img_ev3q"></p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[SteamCore PRO 1.2.0]]></title>
+            <link>https://steamcore-pro.eeldev.com/changelog/1-2-0</link>
+            <guid>https://steamcore-pro.eeldev.com/changelog/1-2-0</guid>
+            <pubDate>Tue, 17 Nov 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Microphone metering and gain controls, plus audio device fixes.]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="general">General<a href="https://steamcore-pro.eeldev.com/changelog/1-2-0#general" class="hash-link" aria-label="Direct link to General" title="Direct link to General" translate="no">​</a></h2>
+<ul>
+<li class="">Added the <a class="" href="https://steamcore-pro.eeldev.com/docfiles/multiplayer/voice-chat/microphone_level_meter">Microphone Level Meter</a>, with nodes to create, start, and stop the meter, read its level and peak amplitude, check its active state, and get the device name.</li>
+<li class="">Added nodes to get and set microphone input gain.</li>
+<li class="">Protected the microphone device list against concurrent access and stopped clearing it on world startup.</li>
+<li class="">Moved the Get Available Audio Input Devices delegate to the game thread.</li>
+<li class="">Corrected the log format for 64-bit Steam IDs.</li>
+</ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[SteamCore PRO 1.1.11]]></title>
+            <link>https://steamcore-pro.eeldev.com/changelog/1-1-11</link>
+            <guid>https://steamcore-pro.eeldev.com/changelog/1-1-11</guid>
+            <pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Fixes for async nodes, matchmaking, and dedicated servers.]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="general">General<a href="https://steamcore-pro.eeldev.com/changelog/1-1-11#general" class="hash-link" aria-label="Direct link to General" title="Direct link to General" translate="no">​</a></h2>
+<ul>
+<li class="">Fixed async node leaks when the online subsystem is unavailable.</li>
+<li class="">Leaderboard reads and writes now finish when the requested leaderboard cannot be found.</li>
+<li class="">Async callbacks skip destroyed objects.</li>
+<li class="">Resolved deprecation warnings on Unreal Engine 5.3 and newer.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="matchmaking-and-multiplayer">Matchmaking and multiplayer<a href="https://steamcore-pro.eeldev.com/changelog/1-1-11#matchmaking-and-multiplayer" class="hash-link" aria-label="Direct link to Matchmaking and multiplayer" title="Direct link to Matchmaking and multiplayer" translate="no">​</a></h2>
+<ul>
+<li class="">A new server list, ping, or rules request cancels the previous request.</li>
+<li class="">Server list requests finish one second after Steam completes the refresh, without waiting for the timeout.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="dedicated-servers">Dedicated servers<a href="https://steamcore-pro.eeldev.com/changelog/1-1-11#dedicated-servers" class="hash-link" aria-label="Direct link to Dedicated servers" title="Direct link to Dedicated servers" translate="no">​</a></h2>
+<ul>
+<li class="">Fixed callback registration for affected game server interfaces so their callbacks fire on dedicated servers.</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="removed">Removed<a href="https://steamcore-pro.eeldev.com/changelog/1-1-11#removed" class="hash-link" aria-label="Direct link to Removed" title="Direct link to Removed" translate="no">​</a></h2>
+<ul>
+<li class="">Removed the legacy <code>SteamCoreNetDriver</code>.</li>
+</ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[SteamCore PRO 1.1.9]]></title>
+            <link>https://steamcore-pro.eeldev.com/changelog/1-1-9</link>
+            <guid>https://steamcore-pro.eeldev.com/changelog/1-1-9</guid>
+            <pubDate>Fri, 25 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Added Steam Input callbacks for configuration, devices, slots, and actions.]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="input">Input<a href="https://steamcore-pro.eeldev.com/changelog/1-1-9#input" class="hash-link" aria-label="Direct link to Input" title="Direct link to Input" translate="no">​</a></h2>
+<p>Added five Steam Input callbacks.</p>
+<ul>
+<li class=""><code>OnSteamInputConfigurationLoadedCallback</code></li>
+<li class=""><code>OnSteamInputDeviceDisconnectedCallback</code></li>
+<li class=""><code>OnSteamInputGamepadSlotChangeCallback</code></li>
+<li class=""><code>OnSteamInputDeviceConnectedCallback</code></li>
+<li class=""><code>OnSteamInputActionEventCallback</code></li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="Steam Input callback nodes" src="https://steamcore-pro.eeldev.com/assets/images/steam-input-callbacks-3e9aeafad79d30e79bb3670a2504b2ba.png" width="1024" height="342" class="img_ev3q"></p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[SteamCore PRO 1.1.8]]></title>
+            <link>https://steamcore-pro.eeldev.com/changelog/1-1-8</link>
+            <guid>https://steamcore-pro.eeldev.com/changelog/1-1-8</guid>
+            <pubDate>Thu, 03 Sep 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[GENERAL]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="general"><strong>GENERAL</strong><a href="https://steamcore-pro.eeldev.com/changelog/1-1-8#general" class="hash-link" aria-label="Direct link to general" title="Direct link to general" translate="no">​</a></h2>
+<ul>
+<li class="">Fixed a packaging issue when the plugin is disabled</li>
+</ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[SteamCore PRO 1.1.7]]></title>
+            <link>https://steamcore-pro.eeldev.com/changelog/1-1-7</link>
+            <guid>https://steamcore-pro.eeldev.com/changelog/1-1-7</guid>
+            <pubDate>Fri, 14 Aug 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[GENERAL]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="general"><strong>GENERAL</strong><a href="https://steamcore-pro.eeldev.com/changelog/1-1-7#general" class="hash-link" aria-label="Direct link to general" title="Direct link to general" translate="no">​</a></h2>
+<ul>
+<li class="">Updated to Steamworks SDK version 1.65</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="v165-23th-july-2026">v1.65 23th July 2026<a href="https://steamcore-pro.eeldev.com/changelog/1-1-7#v165-23th-july-2026" class="hash-link" aria-label="Direct link to v1.65 23th July 2026" title="Direct link to v1.65 23th July 2026" translate="no">​</a></h2>
+<p>Steam Machine, Steam Frame and Steam Deck:</p>
+<ul>
+<li class="">Removed ISteamUtils::IsRunningOnSteamDeck(). Please use other feature specific methods below.</li>
+<li class="">Added ISteamUtils::IsRunningOnSteamHardware() which returns ESteamHardwareType. Use this call for analytics, support or diagnostic purposes. For functional decisions, see other SDK calls.</li>
+<li class="">Added ISteamUtils::GetSteamHardwareDefaultConfig() to help choose default game settings (video and other) that you have tuned for specific Steam hardware. It also enables changing your default game settings on future Steam hardware without needing to recompile your game.</li>
+<li class="">Added ISteamUtils::IsRunningUnderProton() to determine if your game is running under the Proton compatibility layer on Linux.</li>
+<li class="">ISteamUtils contains other pre-existing methods that may be useful when replacing IsRunningOnSteamDeck(), such as ISteamUtils::IsSteamInBigPictureMode() and ISteamUtils::IsSteamRunningInVR().</li>
+</ul>
+<p>ISteamApps:</p>
+<ul>
+<li class="">Added SetGamePerformanceSetting() and SetGameRenderResolution() methods so a game can report to Steam servers what the relative performance settings and game resolution are set to for the given user. This data will be included with anonymous framerate data if the user has opted into sharing that.</li>
+</ul>
+<p>ISteamUGC – Added options for querying UGC (sorted in descending order):</p>
+<ul>
+<li class="">k_EUGCQuery_RankedByNumParentItems – how many items depend on this item (if it isn’t a collection)</li>
+<li class="">k_EUGCRankedByNumParentCollections – how many collections contain this item</li>
+</ul>
+<p>Steam Input:</p>
+<ul>
+<li class="">Added Switch 2, Steam Controller and Steam Frame Controller action origin enum values</li>
+</ul>
+<p>ISteamMatchmakingServers:</p>
+<ul>
+<li class="">Added ISteamMatchmakingServers::ServerFriends() to get a list of friends that have recently played on a specific server</li>
+<li class="">Added “popularamongfriends” filter option to retrieve a set of servers that the user’s friends commonly play on</li>
+</ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[SteamCore PRO 1.1.6]]></title>
+            <link>https://steamcore-pro.eeldev.com/changelog/1-1-6</link>
+            <guid>https://steamcore-pro.eeldev.com/changelog/1-1-6</guid>
+            <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[DEDICATED SERVERS]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="dedicated-servers"><strong>DEDICATED SERVERS</strong><a href="https://steamcore-pro.eeldev.com/changelog/1-1-6#dedicated-servers" class="hash-link" aria-label="Direct link to dedicated-servers" title="Direct link to dedicated-servers" translate="no">​</a></h2>
+<ul>
+<li class="">Fixed an issue when dedicated servers were not using SteamNetworking and clients trying to connect using SteamNetworking instead of IP networking</li>
+</ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[SteamCore PRO 1.1.5]]></title>
+            <link>https://steamcore-pro.eeldev.com/changelog/1-1-5</link>
+            <guid>https://steamcore-pro.eeldev.com/changelog/1-1-5</guid>
+            <pubDate>Thu, 18 Jun 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[GENERAL]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="general"><strong>GENERAL</strong><a href="https://steamcore-pro.eeldev.com/changelog/1-1-5#general" class="hash-link" aria-label="Direct link to general" title="Direct link to general" translate="no">​</a></h2>
+<ul>
+<li class="">Added support for Unreal Engine 5.8</li>
+<li class="">Added node for ServerTravel that takes in a string</li>
+</ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[SteamCore PRO 1.1.4]]></title>
+            <link>https://steamcore-pro.eeldev.com/changelog/1-1-4</link>
+            <guid>https://steamcore-pro.eeldev.com/changelog/1-1-4</guid>
+            <pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[GENERAL]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="general"><strong>GENERAL</strong><a href="https://steamcore-pro.eeldev.com/changelog/1-1-4#general" class="hash-link" aria-label="Direct link to general" title="Direct link to general" translate="no">​</a></h2>
+<ul>
+<li class="">Updated to Steamworks SDK 1.64</li>
+</ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[SteamCore PRO 1.1.3]]></title>
+            <link>https://steamcore-pro.eeldev.com/changelog/1-1-3</link>
+            <guid>https://steamcore-pro.eeldev.com/changelog/1-1-3</guid>
+            <pubDate>Mon, 04 May 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[SESSIONS]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sessions"><strong>SESSIONS</strong><a href="https://steamcore-pro.eeldev.com/changelog/1-1-3#sessions" class="hash-link" aria-label="Direct link to sessions" title="Direct link to sessions" translate="no">​</a></h2>
+<ul>
+<li class="">Added a node to fetch session settings from a session invite/join, useful for getting session settings before joining a session invite from a friend.</li>
+</ul>
+<p><a href="https://steamcore-pro.eeldev.com/assets/files/02-screenshot-2026-05-04-132931-a7cde7ea6fd52be55c575b615f2585dc.png" target="_blank" class=""><img decoding="async" loading="lazy" src="https://steamcore-pro.eeldev.com/assets/images/01-screenshot-2026-05-04-132931-1024x480-60e48c02ebcbf259191592656876cd2b.png" width="1024" height="480" class="img_ev3q"></a></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="friends"><strong>FRIENDS</strong><a href="https://steamcore-pro.eeldev.com/changelog/1-1-3#friends" class="hash-link" aria-label="Direct link to friends" title="Direct link to friends" translate="no">​</a></h2>
+<ul>
+<li class="">Fixed a rare crash when requesting user information</li>
+</ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[SteamCore PRO 1.1.2]]></title>
+            <link>https://steamcore-pro.eeldev.com/changelog/1-1-2</link>
+            <guid>https://steamcore-pro.eeldev.com/changelog/1-1-2</guid>
+            <pubDate>Mon, 16 Feb 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[SESSIONS]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sessions"><strong>SESSIONS</strong><a href="https://steamcore-pro.eeldev.com/changelog/1-1-2#sessions" class="hash-link" aria-label="Direct link to sessions" title="Direct link to sessions" translate="no">​</a></h2>
+<ul>
+<li class="">Fixed an issue when using the IpNetDriver and Sessions where the correct IP was not being set</li>
+</ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[SteamCore PRO 1.1.0]]></title>
+            <link>https://steamcore-pro.eeldev.com/changelog/1-1-0</link>
+            <guid>https://steamcore-pro.eeldev.com/changelog/1-1-0</guid>
+            <pubDate>Sun, 07 Dec 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[GENERAL]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="general"><strong>GENERAL</strong><a href="https://steamcore-pro.eeldev.com/changelog/1-1-0#general" class="hash-link" aria-label="Direct link to general" title="Direct link to general" translate="no">​</a></h2>
+<ul>
+<li class="">Updated to Steamworks SDK 1.63</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="utils"><strong>UTILS</strong><a href="https://steamcore-pro.eeldev.com/changelog/1-1-0#utils" class="hash-link" aria-label="Direct link to utils" title="Direct link to utils" translate="no">​</a></h2>
+<ul>
+<li class="">Fixed the GetLastJoinedLobbyId function to return the correct lobby</li>
+</ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[SteamCore PRO 1.0.8]]></title>
+            <link>https://steamcore-pro.eeldev.com/changelog/1-0-8</link>
+            <guid>https://steamcore-pro.eeldev.com/changelog/1-0-8</guid>
+            <pubDate>Wed, 12 Nov 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[GENERAL]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="general"><strong>GENERAL</strong><a href="https://steamcore-pro.eeldev.com/changelog/1-0-8#general" class="hash-link" aria-label="Direct link to general" title="Direct link to general" translate="no">​</a></h2>
+<ul>
+<li class="">Added support for Unreal Engine 5.7</li>
+</ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[SteamCore PRO 1.0.7]]></title>
+            <link>https://steamcore-pro.eeldev.com/changelog/1-0-7</link>
+            <guid>https://steamcore-pro.eeldev.com/changelog/1-0-7</guid>
+            <pubDate>Mon, 29 Sep 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[SESSIONS]]></description>
+            <content:encoded><![CDATA[<p>SESSIONS</p>
+<ul>
+<li class="">Removed unused options in the “<strong>Create SteamCore PRO Session</strong>” node</li>
+<li class="">Added a new Create Session node called “<strong>Create SteamCore PRO Session (Extra)</strong>” node that contains all settings that were previously available in the old node</li>
+<li class="">Added support for the new <strong>SEARCH_LOBBIES</strong> search key that is used in Unreal Engine</li>
+</ul>
+<p><a href="https://steamcore-pro.eeldev.com/assets/files/01-screenshot-2025-09-29-173620-625b38c128248e2b446f09767db0dd66.png" target="_blank" class=""><img decoding="async" loading="lazy" src="https://steamcore-pro.eeldev.com/assets/images/01-screenshot-2025-09-29-173620-625b38c128248e2b446f09767db0dd66.png" width="960" height="711" class="img_ev3q"></a></p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[SteamCore PRO 1.0.6.9]]></title>
+            <link>https://steamcore-pro.eeldev.com/changelog/1-0-6-9</link>
+            <guid>https://steamcore-pro.eeldev.com/changelog/1-0-6-9</guid>
+            <pubDate>Thu, 11 Sep 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[GENERAL]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="general"><strong>GENERAL</strong><a href="https://steamcore-pro.eeldev.com/changelog/1-0-6-9#general" class="hash-link" aria-label="Direct link to general" title="Direct link to general" translate="no">​</a></h2>
+<ul>
+<li class="">It’s now possible to launch shipping builds locally, removing the old requirement for shipping builds to be launched via the steam client.<br>
+See the <a href="https://steamcore-pro.eeldev.com/docfiles/getting_started/configuring-plugin" target="_blank" rel="noopener noreferrer" class="">Configuring the Plugin</a> documentation for more information.</li>
+</ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[SteamCore PRO 1.0.6.8]]></title>
+            <link>https://steamcore-pro.eeldev.com/changelog/1-0-6-8</link>
+            <guid>https://steamcore-pro.eeldev.com/changelog/1-0-6-8</guid>
+            <pubDate>Wed, 03 Sep 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[GENERAL]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="general"><strong>GENERAL</strong><a href="https://steamcore-pro.eeldev.com/changelog/1-0-6-8#general" class="hash-link" aria-label="Direct link to general" title="Direct link to general" translate="no">​</a></h2>
+<ul>
+<li class="">Fixed deprecation warnings for sessions</li>
+<li class="">Added more debugging output for sessions</li>
+</ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[SteamCore PRO 1.0.6.7]]></title>
+            <link>https://steamcore-pro.eeldev.com/changelog/1-0-6-7</link>
+            <guid>https://steamcore-pro.eeldev.com/changelog/1-0-6-7</guid>
+            <pubDate>Mon, 25 Aug 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[GENERAL]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="general"><strong>GENERAL</strong><a href="https://steamcore-pro.eeldev.com/changelog/1-0-6-7#general" class="hash-link" aria-label="Direct link to general" title="Direct link to general" translate="no">​</a></h2>
+<ul>
+<li class="">Fixed a packaging error related to the FSteamSessionResult struct</li>
+</ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[SteamCore PRO 1.0.6.6]]></title>
+            <link>https://steamcore-pro.eeldev.com/changelog/1-0-6-6</link>
+            <guid>https://steamcore-pro.eeldev.com/changelog/1-0-6-6</guid>
+            <pubDate>Wed, 13 Aug 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[FRIENDS]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="friends"><strong>FRIENDS</strong><a href="https://steamcore-pro.eeldev.com/changelog/1-0-6-6#friends" class="hash-link" aria-label="Direct link to friends" title="Direct link to friends" translate="no">​</a></h2>
+<ul>
+<li class="">It’s now possible to listen for <em>Session Invite Received</em>. This allows the player to handle invites directly in-game via the in-game UI, for example.<br>
+<a href="https://steamcore-pro.eeldev.com/docfiles/multiplayer/friends/inviting_friends#listen-for-session-invites" target="_blank" rel="noopener noreferrer" class="">See the documentation for an example</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="dedicated-server"><strong>DEDICATED SERVER</strong><a href="https://steamcore-pro.eeldev.com/changelog/1-0-6-6#dedicated-server" class="hash-link" aria-label="Direct link to dedicated-server" title="Direct link to dedicated-server" translate="no">​</a></h2>
+<ul>
+<li class="">A new node, <strong>ServerTravel</strong>, has been added. This allows the server/host to switch maps using <em>SeamlessTravel</em> or <em>ServerTravel</em> rather than executing the traditional console command. It also allows the developer to use soft references to maps.<br>
+<a href="https://steamcore-pro.eeldev.com/docfiles/multiplayer/dedicated-servers/switching_maps" target="_blank" rel="noopener noreferrer" class="">See the documentation for an example</a></li>
+</ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[SteamCore PRO 1.0.6.5]]></title>
+            <link>https://steamcore-pro.eeldev.com/changelog/1-0-6-5</link>
+            <guid>https://steamcore-pro.eeldev.com/changelog/1-0-6-5</guid>
+            <pubDate>Wed, 11 Jun 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[MATCHMAKING]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="matchmaking"><strong>MATCHMAKING</strong><a href="https://steamcore-pro.eeldev.com/changelog/1-0-6-5#matchmaking" class="hash-link" aria-label="Direct link to matchmaking" title="Direct link to matchmaking" translate="no">​</a></h2>
+<ul>
+<li class="">Fixed a crash when calling “<strong>Cancel Ping Queries</strong>” function without a running query</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="sessions"><strong>SESSIONS</strong><a href="https://steamcore-pro.eeldev.com/changelog/1-0-6-5#sessions" class="hash-link" aria-label="Direct link to sessions" title="Direct link to sessions" translate="no">​</a></h2>
+<ul>
+<li class="">If no password is set when creating a session then it will no longer hash an empty password</li>
+<li class=""><strong>Find SteamCore Pro Sessions</strong> will now return if a session is passworded</li>
+</ul>
+<p><img decoding="async" loading="lazy" src="https://steamcore-pro.eeldev.com/assets/images/01-screenshot-2025-06-11-184732-1024x440-1d6c6f9ba79a45be9f6c53644da690a9.png" width="1024" height="440" class="img_ev3q"></p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[SteamCore PRO 1.0.6.4]]></title>
+            <link>https://steamcore-pro.eeldev.com/changelog/1-0-6-4</link>
+            <guid>https://steamcore-pro.eeldev.com/changelog/1-0-6-4</guid>
+            <pubDate>Tue, 03 Jun 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[GENERAL]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="general"><strong>GENERAL</strong><a href="https://steamcore-pro.eeldev.com/changelog/1-0-6-4#general" class="hash-link" aria-label="Direct link to general" title="Direct link to general" translate="no">​</a></h2>
+<ul>
+<li class="">Added support for Unreal Engine 5.6</li>
+</ul>]]></content:encoded>
+        </item>
+    </channel>
+</rss>

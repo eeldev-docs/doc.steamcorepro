@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[2061],{89334:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/changelog/page/3","page":3,"postsPerPage":10,"totalPages":6,"totalCount":58,"previousPage":"/changelog/page/2","nextPage":"/changelog/page/4","blogDescription":"Release notes for SteamCore PRO","blogTitle":"SteamCore PRO Changelog"}}')}}]);
