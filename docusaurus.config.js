@@ -40,12 +40,20 @@ const config = {
           //editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         
-        //blog: {
-        //  showReadingTime: true,
-        //  sortPosts: 'ascending'
-        //  // Please change this to your repo.
-          //editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        //},
+        blog: {
+          path: 'changelog',
+          routeBasePath: 'changelog',
+          blogTitle: 'SteamCore PRO Changelog',
+          blogDescription: 'Release notes for SteamCore PRO',
+          blogSidebarTitle: 'Recent releases',
+          showReadingTime: false,
+          onUntruncatedBlogPosts: 'ignore',
+          feedOptions: {
+            type: 'rss',
+            title: 'SteamCore PRO Changelog',
+            description: 'Release notes for SteamCore PRO',
+          },
+        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
